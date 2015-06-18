@@ -17,7 +17,11 @@ Usability Tester - Raqulle Carter
 
 Day 1: 
 9:30 am  - Initial Kick-off meeting with team to discuss the scope of work and initial ideas, materials to review, etc. 
-1pm - formal planning meeting, setup scrum board and reviewed visual data driven options, decided on data set type (selected Food) since it was a familiar topic for the team. Began to setup user stories based on ideas idenitified during planning.  
+1pm - formal planning meeting, setup scrum board and reviewed visual data driven options, decided to use all three API data sets. Began to setup user stories based on ideas idenitified during planning.  
+
+Main User Stories Indentified 
+- Creating a main search menu that is transparent and easy to use on a smaller device 
+- 
 
 Day 2: 
 
