@@ -23,6 +23,8 @@ Main User Stories Indentified
 - Creating a main search menu that is transparent and easy to use on a smaller device 
 - Background graphic based on a default search when the page loads. 
 - Identified options for a heat map, reviewed open source google map types and selected the best fit
+- Used GitHub Pages to continuously publish updates to the web site
+
 
 Day 2: 
 
