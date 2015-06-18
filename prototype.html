@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AECOM Prototype</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+	
+
+
+	<script type="text/javascript">
+		$.getJSON('https://api.fda.gov/food/enforcement.json?api_key=OcwgoDc41cB1ppVVXhOlS2hEGs4ky23AoB1MLBFB&count=report_date', function(data) {
+		    //data is the JSON string
+		    // var json = JSON.parse(data);
+		    // alert(json.results[0].time);
+
+		    var items = [];
+			$.each( data.results, function( key, val ) {
+				items.push( "<li id='" + key + "'>" + val + "</li>" );
+			});
+
+			$( "<ul/>", {
+				"class": "my-new-list",
+				html: items.join( "" )
+			}).appendTo( "body" );
+		});
+	</script>
+
+</body>
+</html>
