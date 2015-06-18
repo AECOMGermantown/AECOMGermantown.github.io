@@ -1,0 +1,75 @@
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Demo: jQuery Ajax Example with JSON Response</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<form method="post" action="">
+		<button value="getList" type="submit">Get Food Recall List!</button>
+	</form>
+	
+	<div id="listInfo">
+	<!-- Javascript will print data in here -->
+	</div>
+	<br/>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var totalCount = 0;
+        var currentCount = 0;
+        var perBatchAmount = 100;
+
+        $(':submit').on('click', function () { // This event fires when a button is clicked
+            var button = $(this).val();
+            $.ajax({ // ajax call starts
+                url: 'http://api.fda.gov/food/enforcement.json?&limit=1',
+                dataType: 'json' // Choosing a JSON datatype
+            })
+            .fail(function () {
+                alert("Ajax failed to fetch data in submit");
+            })
+            .done(function (data) { // Variable data contains the data we get from serverside
+                $('#listInfo').html(''); // Clear div
+                totalCount = data.meta.results.total;
+                if (totalCount > 5000)
+                {
+                    totalCount = 5000;
+                }
+                $('#listInfo').append("Total Count is: " + totalCount + '<br/>');
+
+                var loopCount = parseInt(totalCount / perBatchAmount);
+                if ((totalCount % perBatchAmount) > 0) {
+                    loopCount++;
+                }
+                $('#listInfo').append("Loop Count: " + loopCount + '<br/>');
+                for (var i = 0; i < loopCount; i++) {
+                    currentCount = i * perBatchAmount;
+                    fetchData();
+                }
+            });
+            return false; // keeps the page from not refreshing 
+        });
+
+        function fetchData() {
+            $.ajax({ // ajax call starts
+                url: 'http://api.fda.gov/food/enforcement.json?&limit=' + perBatchAmount + '&skip=' + currentCount,
+                dataType: 'json' // Choosing a JSON datatype
+            })
+            .fail(function () {
+                alert("Ajax failed to fetch data in fetchData");
+            })
+            .done(function (data) { // Variable data contains the data we get from serverside
+                for (var j in data.results) {
+                    $('#listInfo').append(data.results[j].recall_number + '<br/>');
+                }
+            });
+        }
+    });
+</script>
+</html>
