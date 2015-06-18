@@ -21,6 +21,7 @@ Day 1:
 
 Main User Stories Indentified 
 - Creating a main search menu that is transparent and easy to use on a smaller device 
+- Background graphic based on a default search when the page loads. 
 - 
 
 Day 2: 
