@@ -1,0 +1,53 @@
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Demo: jQuery Ajax Example with JSON Response</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+<script src="GetData.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<form method="post" action="">
+        <br />
+        Testing #2
+        <br />
+        <br />
+        <br />
+        <button value="All" type="submit">Get All Recalls</button>
+        <button value="food" type="submit">Get Food Recalls</button>
+        <button value="drug" type="submit">Get Drug Recalls</button>
+        <button value="device" type="submit">Get Device Recalls</button>
+        <button value="showResult" type="button" onclick="getList();">Show Result</button>
+	</form>
+	
+	<div id="listInfo">
+	<!-- Javascript will print data in here -->
+	</div>
+	<br/>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(':submit').on('click', function () { // This event fires when a button is clicked
+            var button = $(this).val();
+
+            resetList();
+            if (button != "All") {
+                triggerFetch(button);
+            }
+            else {
+                triggerFetch("device");
+                setTimeout(function () { triggerFetch("drug"); }, 7000);
+                setTimeout(function () { triggerFetch("food"); }, 14000);
+                
+            }
+            return false; // keeps the page from not refreshing 
+        });
+
+    });
+</script>
+</html>

@@ -11,7 +11,9 @@
 
 <body>
 	<form method="post" action="">
-		<button value="getList" type="submit">Get Food Recall List!</button>
+        <button value="food" type="submit">Get Food Recalls</button>
+        <button value="drug" type="submit">Get Drug Recalls</button>
+        <button value="device" type="submit">Get Device Recalls</button>
 	</form>
 	
 	<div id="listInfo">
@@ -28,11 +30,11 @@
         $(':submit').on('click', function () { // This event fires when a button is clicked
             var button = $(this).val();
             $.ajax({ // ajax call starts
-                url: 'http://api.fda.gov/food/enforcement.json?&limit=1',
+                url: 'http://api.fda.gov/' + button + '/enforcement.json?&limit=1',
                 dataType: 'json' // Choosing a JSON datatype
             })
             .fail(function () {
-                alert("Ajax failed to fetch data in submit");
+                //alert("Ajax failed to fetch data in submit");
             })
             .done(function (data) { // Variable data contains the data we get from serverside
                 $('#listInfo').html(''); // Clear div
@@ -50,19 +52,19 @@
                 $('#listInfo').append("Loop Count: " + loopCount + '<br/>');
                 for (var i = 0; i < loopCount; i++) {
                     currentCount = i * perBatchAmount;
-                    fetchData();
+                    fetchData(button);
                 }
             });
             return false; // keeps the page from not refreshing 
         });
 
-        function fetchData() {
+        function fetchData(btnType) {
             $.ajax({ // ajax call starts
-                url: 'http://api.fda.gov/food/enforcement.json?&limit=' + perBatchAmount + '&skip=' + currentCount,
+                url: 'http://api.fda.gov/' + btnType + '/enforcement.json?&limit=' + perBatchAmount + '&skip=' + currentCount,
                 dataType: 'json' // Choosing a JSON datatype
             })
             .fail(function () {
-                alert("Ajax failed to fetch data in fetchData");
+                //alert("Ajax failed to fetch data in fetchData");
             })
             .done(function (data) { // Variable data contains the data we get from serverside
                 for (var j in data.results) {
