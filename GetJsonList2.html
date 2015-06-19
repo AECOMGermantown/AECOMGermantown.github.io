@@ -17,9 +17,11 @@
         <br />
         <br />
         <br />
+        <button value="All" type="submit">Get All Recalls</button>
         <button value="food" type="submit">Get Food Recalls</button>
         <button value="drug" type="submit">Get Drug Recalls</button>
         <button value="device" type="submit">Get Device Recalls</button>
+        <button value="showResult" type="button" onclick="getList();">Show Result</button>
 	</form>
 	
 	<div id="listInfo">
@@ -29,59 +31,21 @@
 </body>
 <script type="text/javascript">
     $(document).ready(function () {
-        var totalCount = 0;
-        var currentCount = 0;
-        var perBatchAmount = 10;
 
         $(':submit').on('click', function () { // This event fires when a button is clicked
             var button = $(this).val();
-            debugger;
-            $.ajax({ // ajax call starts
-                url: 'http://api.fda.gov/' + button + '/enforcement.json?&limit=1',
-                dataType: 'json' // Choosing a JSON datatype
-            })
-            .fail(function () {
-                alert("Ajax failed to fetch data in submit");
-            })
-            .done(function (data) { // Variable data contains the data we get from serverside
-                $('#listInfo').html(''); // Clear div
-                totalCount = data.meta.results.total;
-                if (totalCount > 10)
-                {
-                    totalCount = 10;
-                }
-                $('#listInfo').append("Total Count is: " + totalCount + '<br/>');
-
-                var loopCount = parseInt(totalCount / perBatchAmount);
-                if ((totalCount % perBatchAmount) > 0) {
-                    loopCount++;
-                }
-                $('#listInfo').append("Loop Count: " + loopCount + '<br/>');
-                for (var i = 0; i < loopCount; i++) {
-                    currentCount = i * perBatchAmount;
-                    fetchData(button);
-                }
-            });
+            if (button != "All") {
+                triggerFetch(button);
+            }
+            else {
+                triggerFetch("food");
+                setTimeout( function () {}, 7000);
+                triggerFetch("drug");
+                setTimeout(function () { }, 7000);
+                triggerFetch("device");
+            }
             return false; // keeps the page from not refreshing 
         });
-
-        function fetchData_xxx(btnType) {
-            var arr = new Array();
-            $.ajax({ // ajax call starts
-                url: 'http://api.fda.gov/' + btnType + '/enforcement.json?&limit=' + perBatchAmount + '&skip=' + currentCount,
-                dataType: 'json' // Choosing a JSON datatype
-            })
-            .fail(function () {
-                alert("Ajax failed to fetch data in fetchData");
-            })
-            .done(function (data) { // Variable data contains the data we get from serverside
-                debugger;
-                for (var j in data.results) {
-                    arr.push(data.results[j].recall_number, data.results[j].reason_for_recall, data.results[j].status, data.results[j].recall_initiation_date);
-                    $('#listInfo').append(data.results[j].recall_number + '<br/>');
-                }
-            });
-        }
 
     });
 </script>

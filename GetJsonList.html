@@ -29,7 +29,6 @@
 
         $(':submit').on('click', function () { // This event fires when a button is clicked
             var button = $(this).val();
-            debugger;
             $.ajax({ // ajax call starts
                 url: 'http://api.fda.gov/' + button + '/enforcement.json?&limit=1',
                 dataType: 'json' // Choosing a JSON datatype
