@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: US Map Visualization</title>
+
+	<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['geochart']}]}"></script>
+   
+</head>
+<body>
+	
+   <div id="geochart-colors" style="width: 700px; height: 433px;"></div>
+
+
+	<script type="text/javascript">
+		google.setOnLoadCallback(drawRegionsMap);
+		function drawRegionsMap() {
+			var data = google.visualization.arrayToDataTable([
+				['State',   'Reports'],
+				['AL', 36],
+				['TX', 15],
+				['NY', 14],
+				['OR', 3],
+				['WA', 1],
+				['FL', 12],
+			]);
+
+			var options = {
+				region: 'US', // US
+				backgroundColor: '#111111',
+				backgroundColor: {fill: 'white'},
+				backgroundColor: {stroke: '#7fbb42'},
+				backgroundColor: {strokeWidth: 84},
+				resolution: 'provinces',
+				colorAxis: {colors: ['#841703', '#c62304', '#ff2d05']},
+				backgroundColor: '#grey',
+				datalessRegionColor: '#b2d68d',
+				defaultColor: '#b2d68d',
+			};
+
+			var chart = new google.visualization.GeoChart(document.getElementById('geochart-colors'));
+			chart.draw(data, options);
+		};
+
+
+
+	</script>
+
+
+</body>
+</html>
