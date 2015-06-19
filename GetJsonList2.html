@@ -12,6 +12,11 @@
 
 <body>
 	<form method="post" action="">
+        <br />
+        Testing #2
+        <br />
+        <br />
+        <br />
         <button value="food" type="submit">Get Food Recalls</button>
         <button value="drug" type="submit">Get Drug Recalls</button>
         <button value="device" type="submit">Get Device Recalls</button>
@@ -60,7 +65,7 @@
             return false; // keeps the page from not refreshing 
         });
 
-        function fetchData(btnType) {
+        function fetchData_xxx(btnType) {
             var arr = new Array();
             $.ajax({ // ajax call starts
                 url: 'http://api.fda.gov/' + btnType + '/enforcement.json?&limit=' + perBatchAmount + '&skip=' + currentCount,
@@ -72,11 +77,12 @@
             .done(function (data) { // Variable data contains the data we get from serverside
                 debugger;
                 for (var j in data.results) {
-                    arr.push(data.results[j].recall_number, data.results[j].reason_for_recall, data.results[j].status, data.results[j].recall_initiation_date); 
+                    arr.push(data.results[j].recall_number, data.results[j].reason_for_recall, data.results[j].status, data.results[j].recall_initiation_date);
                     $('#listInfo').append(data.results[j].recall_number + '<br/>');
                 }
             });
         }
+
     });
 </script>
 </html>
