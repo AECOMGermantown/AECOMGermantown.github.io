@@ -1,0 +1,67 @@
+{
+  "name": "openfda",
+  "description": "Open FDA prototype",
+  "keywords": [
+    "search",
+    "FDA",
+    "GSA"
+  ],
+  "version": "0.1.0",
+  "private": true,
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AECOMGermantown/AECOMGermantown.github.io.git"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "bin": {
+    "protractor-saucelab": "node node_modules/.bin/protractor test/protractor-saucelab-conf.js"
+  },
+  "scripts": {
+    "test": "karma start test/karma.conf.js",
+    "update-webdriver": "webdriver-manager update",
+    "protractor-local": "protractor test/protractor-local-conf.js",
+    "protractor-local-security": "protractor test/protractor-local-conf.js --suite security",
+    "protractor-local-header": "protractor test/protractor-local-conf.js --suite header",
+    "protractor-local-home": "protractor test/protractor-local-conf.js --suite home",
+    "protractor-local-account": "protractor test/protractor-local-conf.js --suite account",
+    "test-single-run": "karma start test/karma.conf.js  --single-run",
+    "protractor-saucelab": "protractor test/protractor-saucelab-conf.js"
+  },
+  "devDependencies": {
+    "appium": "^1.2.3",
+    "bower": "^1.3.12",
+    "gulp": "^3.5.6",
+    "gulp-bless": "^3.0.1",
+    "gulp-clean": "^0.2.4",
+    "gulp-concat": "^2.2.0",
+    "gulp-exec": "^1.0.4",
+    "gulp-if": "^1.2.5",
+    "gulp-jshint": "^1.5.0",
+    "gulp-karma": "^0.0.4",
+    "gulp-less": "^1.2.3",
+    "gulp-minify-html": "^0.1.3",
+    "gulp-ng-html2js": "^0.1.6",
+    "gulp-replace": "^0.5.2",
+    "gulp-replace-task": "^0.1.0",
+    "gulp-uglify": "^0.2.1",
+    "istanbul": "^0.3.2",
+    "jasmine-reporters": "1.0.1",
+    "karma": "~0.10",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-coverage": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-junit-reporter": "^0.2.2",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-safari-launcher": "^0.1.1",
+    "karma-sinon": "^1.0.3",
+    "protractor": "1.4.0",
+    "run-sequence": "^0.3.6",
+    "sinon": "^1.10.3",
+    "gulp-strip-debug": "^1.0.2"
+  },
+  "dependencies": {}
+}
