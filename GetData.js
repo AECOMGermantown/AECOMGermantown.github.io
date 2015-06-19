@@ -1,4 +1,9 @@
 var recallArray = new Array();
+var lkupClassArray = new Array();
+var lkupCtryArray = new Array();
+var lkupStateArray = new Array();
+var lkupCityArray = new Array();
+var lkupStatusArray = new Array();
 
 function Recall(rNum, reason, status, initDate, state, prodType, prodDescription, country, city, firm, reportDate, classification) {
     this.recall_number = rNum;
@@ -24,11 +29,48 @@ function Recall(rNum, reason, status, initDate, state, prodType, prodDescription
     //"initial_firm_notification"
 }
 
+
+
 function getList() {
     for (var i = 0; i < recallArray.length; i++)
         $('#listInfo').append(i + ': ' + recallArray[i].recall_number + ', ' + recallArray[i].classification + '<br/>');
-
 }
+
+function getLkupList() {
+    // store unique status
+    $.each(recallArray, function (key, value) {
+        if ($.inArray(value.status, lkupStatusArray) == -1)
+            lkupStatusArray.push(value.status);
+    });
+
+    // store unique country
+    $.each(recallArray, function (key, value) {
+        if ($.inArray(value.country, lkupCtryArray) == -1)
+            lkupCtryArray.push(value.country);
+    });
+
+    // store unique state
+    $.each(recallArray, function (key, value) {
+        if ($.inArray(value.state, lkupStateArray) == -1)
+            lkupStateArray.push(value.state);
+    });
+
+    // store unique city
+    $.each(recallArray, function (key, value) {
+        if ($.inArray(value.city, lkupCityArray) == -1)
+            lkupCityArray.push(value.city);
+    });
+
+    // store unique classification
+    $.each(recallArray, function (key, value) {
+        if ($.inArray(value.classification, lkupClassArray) == -1)
+            lkupClassArray.push(value.classification);
+    });
+
+    debugger;
+}
+
+
 
 function resetList() {
     recallArray = new Array();
