@@ -26,8 +26,10 @@ Main User Stories Indentified
 - Used GitHub Pages to continuously publish updates to the web site
 - Additional user stories were logged in Visual Studio Online 
 
+Design 
+- Created initial design comp based on options discussed in planning session. See prototype design screenshots for details. 
 
 Day 2: 
-
+Team continued to flush out user stories. Finalized site design. Conducted standup meeting at 1pm to review status. 
 
 Day 3: 
