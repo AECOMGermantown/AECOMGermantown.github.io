@@ -27,8 +27,12 @@ function Recall(rNum, reason, status, initDate, state, prodType, prodDescription
 function getList() {
     for (var i = 0; i < recallArray.length; i++)
         $('#listInfo').append(i + ': ' + recallArray[i].recall_number + ', ' + recallArray[i].classification + '<br/>');
+
 }
 
+function resetList() {
+    recallArray = new Array();
+}
 
 function triggerFetch(btnType) {
     var totalCount = 0;
@@ -44,7 +48,6 @@ function triggerFetch(btnType) {
     })
     .done(function (data) { // Variable data contains the data we get from serverside
         $('#listInfo').html(''); // Clear div
-        recallArray = new Array();
         totalCount = data.meta.results.total;
         if (totalCount > 5000) {
             totalCount = 5000;
@@ -60,7 +63,7 @@ function triggerFetch(btnType) {
             currentCount = i * perBatchAmount;
             fetchData(btnType, perBatchAmount, currentCount);
         }
-        debugger;
+       
 
     });
 }
@@ -71,7 +74,8 @@ function fetchData(btnType, perBatchAmt, currentCnt) {
         url: 'http://api.fda.gov/' + btnType + '/enforcement.json?&limit=' + perBatchAmt + '&skip=' + currentCnt,
         dataType: 'json' // Choosing a JSON datatype
     })
-    .fail(function () {
+    .fail(function (data) {
+        //debugger;
         alert("Ajax failed to fetch data in fetchData");
     })
     .done(function (data) { // Variable data contains the data we get from serverside
@@ -90,8 +94,9 @@ function fetchData(btnType, perBatchAmt, currentCnt) {
                     data.results[j].recalling_firm,
                     data.results[j].report_date,
                     data.results[j].classification));
-            //$('#listInfo').append(data.results[j].recall_number + '<br/>');
         }
         //debugger;
     });
 }
+
+

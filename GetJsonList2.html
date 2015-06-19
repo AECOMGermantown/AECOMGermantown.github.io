@@ -34,15 +34,16 @@
 
         $(':submit').on('click', function () { // This event fires when a button is clicked
             var button = $(this).val();
+
+            resetList();
             if (button != "All") {
                 triggerFetch(button);
             }
             else {
-                triggerFetch("food");
-                setTimeout( function () {}, 7000);
-                triggerFetch("drug");
-                setTimeout(function () { }, 7000);
                 triggerFetch("device");
+                setTimeout(function () { triggerFetch("drug"); }, 7000);
+                setTimeout(function () { triggerFetch("food"); }, 14000);
+                
             }
             return false; // keeps the page from not refreshing 
         });
