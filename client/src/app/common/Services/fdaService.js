@@ -30,7 +30,16 @@ function fdaService($http, $q, $window, config,recallModel,utils) {
 
         var url = utils.subUrl(config.openFDAUrls.enforcement,{btnType:btnType})
 
-        var request = $http.get(config.apiEndpoints.securityLogout);
+        var request = $http.get(url);
+
+        request.then(function(response){
+            console.log(response);
+
+        },function(response){
+
+        });
+
+        return request;
 
     }
 

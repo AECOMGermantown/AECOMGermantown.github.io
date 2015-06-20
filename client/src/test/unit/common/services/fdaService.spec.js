@@ -29,5 +29,10 @@ describe('fda Service', function () {
         expect(_fdaService).toBeDefined();
     });
 
+    it('should return response',function(){
+
+        _fdaService.triggerFetch()
+    })
+
 
 });

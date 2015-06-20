@@ -12,11 +12,11 @@ function utils (_){
 
     function subUrl(url,sub){
 
-        for (var key in sub) {
-            url.replace(key, sub[key]);
-        }
+        var compiled = _.template(url);
+        var newUrl = compiled(sub);
 
-        return url;
+
+        return newUrl;
 
     }
 
