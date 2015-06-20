@@ -7,9 +7,9 @@
 'use strict';
 
 angular.module('commonModule').factory('common.fdaService', fdaService);
-fdaService.$inject = ['$http', '$q', '$window', 'config','common.recallModel','common.utils'];
+fdaService.$inject = ['$http', '$q', 'toastr', 'config','common.recallModel','common.utils'];
 
-function fdaService($http, $q, $window, config,recallModel,utils) {
+function fdaService($http, $q, toastr, config,recallModel,utils) {
     // internal vars
     var perBatchAmount = 100;
     var recalls = [];
@@ -37,7 +37,7 @@ function fdaService($http, $q, $window, config,recallModel,utils) {
         var request = $http.get(url);
 
         request.then(function(response){
-            console.log(response);
+
             totalCount = response.data.meta.results.total > 5000 ? 5000 : response.data.meta.results.total > 5000;
 
 
@@ -48,7 +48,8 @@ function fdaService($http, $q, $window, config,recallModel,utils) {
 
             for (var i = 0; i < requestRecallInfoCount; i++) {
                 currentCount = i * perBatchAmount;
-                recallInfoRequest.push(getRecallInfo(recallType,currentCount));
+                //call with service so it can be stubbed
+                recallInfoRequest.push(service.getRecallInfo(recallType,currentCount));
             }
 
             return $q.all(recallInfoRequest);
@@ -56,7 +57,7 @@ function fdaService($http, $q, $window, config,recallModel,utils) {
 
 
         },function(response){
-
+            toastr.error('Get Recalls Failed', 'Error');
         });
 
         return request;
@@ -79,7 +80,7 @@ function fdaService($http, $q, $window, config,recallModel,utils) {
             });
 
         },function(response){
-
+            toastr.error('Get Recall Info Failed', 'Error');
         });
 
     }

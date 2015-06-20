@@ -2,7 +2,7 @@
 
 var watchJSFiles = ['*.html', 'app/**', '!app/*.template.js', '!app/*.openfda.js', 'test/**', 'assets/less/*.less', 'assets/less/**', '!assets/css/*.css'],
     appJSFiles = ['./app/**/*.js', '!./app/*.template.js', '!./app/*.openfda.js', '!./app/*.vendor.js'],
-    cleanFiles = ['./app/app.openfda.js', './app/app.template.js'/*, './assets/css/*.css'*/],
+    cleanFiles = ['./app/app.openfda.js', './app/app.template.js', './assets/css/*.css'],
     lintDir = ['./app/**/*.js', '!./app/*.openfda.js', '!./app/*.template.js', '!./app/*.vendor.js'],
     vendorJSFiles = ['./bower_components/jquery/dist/jquery.min.js',
         './bower_components/angular/angular.js',
@@ -10,7 +10,8 @@ var watchJSFiles = ['*.html', 'app/**', '!app/*.template.js', '!app/*.openfda.js
         './bower_components/angular-aria/angular-aria.js',
         './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
         './bower_components/angular-sanitize/angular-sanitize.min.js',
-        './bower_components/lodash/lodash.min.js',],
+        './bower_components/lodash/lodash.min.js',
+        './bower_components/angular-toastr/dist/angular-toastr.tpls.min.js'],
     filesToMoveForBuild = ['./index.html', './app/*.js', './assets/**/*.*', '!./assets/less/**/*.*'],
     buildDir = '../build',
     cleanBuildDir = '../build/**';
