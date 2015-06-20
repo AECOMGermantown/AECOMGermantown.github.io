@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="emihdsApp">
+<html lang="en" ng-app="openfdaApp">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -23,17 +23,15 @@
     <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-    <title>WMATA EMIH Document Search</title>
+    <title>Open FDA</title>
     <base href="/">
-    <link rel="stylesheet" href="assets/css/emihds.css">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,800' rel='stylesheet' type='text/css'>-->
-    <!-- <link href='https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:400italic,700italic,400,700|Open+Sans+Condensed:300,300italic'
-           rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="assets/css/openfda.css">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <script src="app/app.vendor.js"></script>
     <script src="app/app.template.js"></script>
-    <script src="app/app.openfdsa.js"></script>
+    <script src="app/app.openfda.js"></script>
 </head>
 <body>
 
@@ -43,26 +41,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-8 col-xs-offset-2">
-                    <!--<img src="http://www.wmata.com/img/header_NewMLogo.png?vvss">-->
-                    <img src="assets/images/header_NewMLogo.png">
 
-
-                    <span class="header-font">WMATA EMIH Document Search</span>
-                    <div ng-include="'search/searchBox.tpl.html'"></div>
+                    <div ng-include="'recalls/recalls.tpl.html'"></div>
                 </div>
             </div>
 
         </div>
 
     </div>
-    <div class="container">
+    <!--<div class="container">
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
                 <div class="search-results-container" ng-include="'search/searchResults.tpl.html'"></div>
 
             </div>
         </div>
-    </div>
+    </div>-->
 
 
 

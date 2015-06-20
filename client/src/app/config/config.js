@@ -6,7 +6,8 @@
 var config = angular.module('configModule', []);
 
 var openFDAUrls = {
-    enforcement:'http://api.fda.gov/{btnType}/enforcement.json?&limit=1'
+    recalls:'http://api.fda.gov/${recallType}/enforcement.json?&limit=1',
+    recallsInfo:'http://api.fda.gov/${recallType}/enforcement.json?&limit=${limit}&skip=${skip}'
 }
 
 

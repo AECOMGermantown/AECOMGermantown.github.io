@@ -29,9 +29,12 @@ describe('fda Service', function () {
         expect(_fdaService).toBeDefined();
     });
 
-    it('should return response',function(){
+    xit('should return call food end point',function(){
 
-        _fdaService.triggerFetch()
+
+        _fdaService.triggerFetch('food').then(function(response){
+            expect(response).not.toBeNull()
+        })
     })
 
 

@@ -41,7 +41,7 @@ function recallModel (){
     Recall.create = function (data) {
 
         var rc = Object.create(Recall);
-        rc.init(data.title,
+        rc.init(
             data.recall_number,
             data.reason_for_recall,
             data.status,

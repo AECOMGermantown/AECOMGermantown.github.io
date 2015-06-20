@@ -10,7 +10,8 @@ angular.module('openfdaApp', [
     'ui.bootstrap',
     'commonModule',
     'configModule',
-    'template.app'
+    'template.app',
+    'recallsModule'
 ]);
 
 
