@@ -1,12 +1,15 @@
-<div ng-controller="recallsController as recallsCtrl" class="input-group">
+<div ng-controller="recallsController as recallsCtrl" >
 
-    <button type="button" data-ng-click="recallsCtrl.getRecalls('food')">Get Food Recalls</button>
-    <button type="button" data-ng-click="recallsCtrl.getRecalls('drug')">Get Drug Recalls</button>
-    <button type="button" data-ng-click="recallsCtrl.getRecalls('device')">Get Device Recalls</button>
+    <div class="input-group">
+        <button type="button" data-ng-click="recallsCtrl.getRecalls('food')">Get Food Recalls</button>
+        <button type="button" data-ng-click="recallsCtrl.getRecalls('drug')">Get Drug Recalls</button>
+        <button type="button" data-ng-click="recallsCtrl.getRecalls('device')">Get Device Recalls</button>
 
-    <div class="search-result" >
-        <ul ng-repeat="recall in recallsCtrl.recalls">
-         <li>{{recall.recall_number}}</li>
-        </ul>
+        <div class="search-result" >
+            <ul ng-repeat="recall in recallsCtrl.recalls">
+                <li>{{recall.recall_number}}</li>
+            </ul>
+        </div>
     </div>
+
 </div>
