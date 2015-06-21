@@ -12,7 +12,9 @@ var watchJSFiles = ['*.html', 'app/**', '!app/*.template.js', '!app/*.openfda.js
         './bower_components/angular-sanitize/angular-sanitize.min.js',
         './bower_components/lodash/lodash.min.js',
         './bower_components/angular-toastr/dist/angular-toastr.tpls.min.js',
-        './bower_components/angular-ui-router/release/angular-ui-router.min.js'],
+        './bower_components/angular-ui-router/release/angular-ui-router.min.js',
+        './bower_components/leaflet/dist/leaflet.js',
+        './bower_components/mapbox.js/mapbox.js'],
     filesToMoveForBuild = ['./index.html', './app/*.js', './assets/**/*.*', '!./assets/less/**/*.*'],
     buildDir = '../build',
     cleanBuildDir = '../build/**';

@@ -4,9 +4,7 @@
         <div id="navbar">
             <ul class="nav navbar-nav" ng-repeat="r in headerCtrl.routes">
                 <li>
-                    <div ng-show="r.itemCount > 0" class="notification">
-                        <div>{{r.itemCount}}</div>
-                    </div>
+
                     <a ng-class="isNavbarActive(r.name)" ng-click="$parent.routeChange(r.name)" class="links-14">{{r.caption}}</a>
                 </li>
             </ul>

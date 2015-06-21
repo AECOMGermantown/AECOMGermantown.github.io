@@ -14,5 +14,11 @@ app.config(function($stateProvider, $urlRouterProvider){
             caption: "Recalls",
             navOrder:1
         })
+        .state('map', {
+            url: "/map",
+            templateUrl: "map/map.tpl.html",
+            caption: "Map",
+            navOrder:1
+        })
 
 });

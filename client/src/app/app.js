@@ -14,7 +14,8 @@ angular.module('openfdaApp', [
     'configModule',
     'template.app',
     'recallsModule',
-    'headerModule'
+    'headerModule',
+    'mapModule'
 ]);
 
 
