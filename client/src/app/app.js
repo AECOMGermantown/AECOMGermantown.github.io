@@ -8,11 +8,13 @@ angular.module('openfdaApp', [
     'ngAnimate',
     'ngSanitize',
     'ui.bootstrap',
+    'ui.router',
     'toastr',
     'commonModule',
     'configModule',
     'template.app',
-    'recallsModule'
+    'recallsModule',
+    'headerModule'
 ]);
 
 

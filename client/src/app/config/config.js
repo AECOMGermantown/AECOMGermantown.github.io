@@ -3,7 +3,6 @@
  */
 'use strict';
 
-var config = angular.module('configModule', []);
 
 var openFDAUrls = {
     recalls:'http://api.fda.gov/${recallType}/enforcement.json?&limit=1',

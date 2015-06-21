@@ -9,7 +9,7 @@ describe('fda Service', function () {
     var _$httpBackend, _$q, _fdaService, _recallModel, _toastr;
 
 
-    beforeEach(module('commonModule', 'configModule','toastr'));
+    beforeEach(module('commonModule', 'configModule','toastr','ui.router'));
 
     beforeEach(inject(['$httpBackend','$q','toastr','common.fdaService','config','common.recallModel',
         function (_$httpBackend_, _$q_,_toastr_,_fdaService_,_config_,_recallModel_) {

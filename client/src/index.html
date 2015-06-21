@@ -36,13 +36,13 @@
 <body>
 
 <div class="app">
-
+    <div ng-include="'header/header.tpl.html'"></div>
     <div class="jumbotron jumbo-bg">
         <div class="container">
             <div class="row">
                 <div class="col-xs-8 col-xs-offset-2">
+                    <div ui-view></div>
 
-                    <div ng-include="'recalls/recalls.tpl.html'"></div>
                 </div>
             </div>
 
