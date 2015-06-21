@@ -38,7 +38,7 @@ function fdaService($http, $q, toastr, config,recallModel,utils) {
 
         request.then(function(response){
 
-            totalCount = response.data.meta.results.total > 5000 ? 5000 : response.data.meta.results.total > 5000;
+            totalCount = response.data.meta.results.total > 5000 ? 5000 : response.data.meta.results.total;
 
 
             var requestRecallInfoCount = parseInt(totalCount / perBatchAmount);

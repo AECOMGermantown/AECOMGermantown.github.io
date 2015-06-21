@@ -16,6 +16,7 @@
         vm.recalls = [];
 
         vm.getRecalls = function (recallType) {
+            vm.recalls = [];
            fdaService.getRecalls(recallType).then(function(resultRecalls){
                vm.recalls = fdaService.recalls;
            });
