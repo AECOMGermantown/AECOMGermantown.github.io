@@ -15,7 +15,9 @@ angular.module('openfdaApp', [
     'template.app',
     'recallsModule',
     'headerModule',
-    'mapModule'
+    'mapModule',
+    'angulartics',
+    'angulartics.google.analytics'
 ]);
 
 

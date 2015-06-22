@@ -27,7 +27,8 @@
     "angular-toastr": "~1.4.1",
     "angular-ui-router": "~0.2.15",
     "leaflet": "~0.7.3",
-    "mapbox.js": "~2.2.0"
+    "mapbox.js": "~2.2.0",
+    "angulartics": "~0.18.0"
   },
   "devDependencies": {},
   "resolutions": {
