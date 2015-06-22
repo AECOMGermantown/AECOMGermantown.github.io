@@ -30,7 +30,6 @@ Main User Stories Indentified
 - Background graphic based on a default search when the page loads. 
 - Identified options for a heat map, reviewed open source google map types and selected the best fit
 - Used GitHub Pages to continuously publish updates to the web site
-- Additional user stories were logged in Visual Studio Online 
 
 Design 
 - Created initial design comp based on options discussed in planning session. See prototype design screenshots for details. 
@@ -39,3 +38,19 @@ Day 2:
 Team continued to flush out user stories. Finalized site design. Conducted standup meeting at 1pm to review status. 
 
 Day 3: 
+
+
+AECOM DevOps Tool Chain
+
+- IDEWebStorm IDE - IDE for JavaScript, CSS & HTML
+- Leaflet Mapping API
+- Jenkins Integration Server - continuously integration server pushing updates based on changes in the GitHub repo
+- Gulp Build Tool - Compiles and verifies successful build; changes are pushed to GitHub and Jenkins
+- Karma, Jasmine, and Protractor for Automated Unit Testing with Javascript and Angular
+- Github Repository - source code and documentation repo with branching based on GitFlow 
+- Web ServerUbuntu Open source web server hosted on AWS for publishing web sites.  
+- Continuous Monitoring Zabbix
+- Application ContainerDocker
+- Web Package ManagerBower
+
+
