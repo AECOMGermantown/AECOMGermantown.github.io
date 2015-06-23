@@ -56,7 +56,7 @@ DevOps Engineer (Manuel Sanchez)
 
 3)Understand what people need, by including people in the prototype development and design process
 4)Used at least three "human-centered design" techniques or tools
-5)created or used a design style guide and/or a pattern library
+5 Design style guide (GSA_FDA_Proto_StyleGuide_v.1.pdf) is located in the prototype_
 6)
 7)
 8)
