@@ -35,6 +35,7 @@ function Recall(rNum, reason, status, initDate, state, prodType, prodDescription
 function getList() {
     for (var i = 0; i < recallArray.length; i++)
         $('#listInfo').append(i + ': ' + recallArray[i].recall_number + ', ' + recallArray[i].classification + '<br/>');
+        alert(resultsObject['MA']);
 }
 
 function getLkupList() {
@@ -113,7 +114,6 @@ function triggerFetch(btnType) {
 
 
 function fetchData(btnType, perBatchAmt, currentCnt) {
-    alert(btnType);
     $.ajax({ // ajax call starts
         url: 'http://api.fda.gov/' + btnType + '/enforcement.json?&limit=' + perBatchAmt + '&skip=' + currentCnt,
         dataType: 'json' // Choosing a JSON datatype
@@ -148,12 +148,13 @@ function fetchData(btnType, perBatchAmt, currentCnt) {
 function updateResults(key) {
     //If the key already exists increment the value by 1
     //Otherwise add a new key/value pair
-    alert(key);
-    if (key in resultsObject) {
-        resultsObject[key] = resultsObject[key] + 1;
-    }
-    else {
-        resultsObject[key] = 1;
+    if (key != null){
+        if (key in resultsObject) {
+            resultsObject[key] = resultsObject[key] + 1;
+        }
+        else {
+            resultsObject[key] = 1;
+        }
     }
 }
 
