@@ -8,14 +8,14 @@ The AECOM team used a combination of Agile Scrum ad DevOps engineering technique
 
 An Agile team was formed with specfic roles assigned based on the following skills:  
 
-Product Manager - John Keister
-Technical Architect - David McEnderfer
-Back End Web Developer - Charles Tsai
-Front End Web Developer -  Trevor Plumley
-Front End Web Developer - Alex Bostic
-Interaction Designer - Chris Litz 
-Usability Tester - Raqulle Carter
-DevOps Engineer - Manuel Sanchez
+Product Manager (John Keister),
+Technical Architect (David McEnderfer),
+Back End Web Developer (Charles Tsai), 
+Front End Web Developer (Trevor Plumley), 
+Front End Web Developer (Alex Bostic),
+Interaction Designer (Chris Litz),
+Usability Tester (Raqulle Carter),
+DevOps Engineer (Manuel Sanchez)
 
 Through an iterative process we identified the best fit open-source technology tool chain to support development, with a focus on automation and continuous integration. The following tool chain was setup for the prototype project 
 
