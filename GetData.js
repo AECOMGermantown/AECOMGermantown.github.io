@@ -4,6 +4,7 @@ var lkupCtryArray = new Array();
 var lkupStateArray = new Array();
 var lkupCityArray = new Array();
 var lkupStatusArray = new Array();
+var resultsObject = {};
 
 function Recall(rNum, reason, status, initDate, state, prodType, prodDescription, country, city, firm, reportDate, classification) {
     this.recall_number = rNum;
@@ -136,9 +137,21 @@ function fetchData(btnType, perBatchAmt, currentCnt) {
                     data.results[j].recalling_firm,
                     data.results[j].report_date,
                     data.results[j].classification));
+                    
+                    updateResults(data.results[j].state);
         }
         //debugger;
     });
 }
 
+function updateResults(key) {
+    //If the key already exists increment the value by 1
+    //Otherwise add a new key/value pair
+    if (key in resultsObject) {
+        resultsObject[key] = resultsObject[key] + 1;
+    }
+    else {
+        resultsObject[key] = 1;
+    }
+}
 
