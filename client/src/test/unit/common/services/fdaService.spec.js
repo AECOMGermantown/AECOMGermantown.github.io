@@ -6,24 +6,32 @@
 
 describe('fda Service', function () {
 
-    var _$httpBackend, _$q, _fdaService, _recallModel, _toastr;
+    var _$httpBackend, _$q, _$analytics, _fdaService, _recallModel, _toastr;
 
 
-    beforeEach(module('commonModule', 'configModule','toastr','ui.router'));
+    beforeEach(module('commonModule', 'configModule','toastr','ui.router','angulartics', 'angulartics.google.analytics'));
 
-    beforeEach(inject(['$httpBackend','$q','toastr','common.fdaService','config','common.recallModel',
-        function (_$httpBackend_, _$q_,_toastr_,_fdaService_,_config_,_recallModel_) {
+    beforeEach(inject(['$httpBackend','$q','$analytics','toastr','common.fdaService','config','common.recallModel',
+        function (_$httpBackend_, _$q_,_$analytics_,_toastr_,_fdaService_,_config_,_recallModel_) {
             _$httpBackend = _$httpBackend_;
             _$q = _$q_;
             _toastr = _toastr_;
             _recallModel = _recallModel_;
             _fdaService = _fdaService_;
+            _$analytics = _$analytics_;
 
         }]));
+
+    beforeEach(function () {
+        sinon.stub(_$analytics,'eventTrack',function(){
+            return;
+        });
+    });
 
     afterEach(function () {
         _$httpBackend.verifyNoOutstandingExpectation();
         _$httpBackend.verifyNoOutstandingRequest();
+        _$analytics.eventTrack.restore();
     });
 
 

@@ -7,9 +7,9 @@
 'use strict';
 
 angular.module('commonModule').factory('common.fdaService', fdaService);
-fdaService.$inject = ['$http', '$q', 'toastr', 'config','common.recallModel','common.utils'];
+fdaService.$inject = ['$http', '$q','$analytics', 'toastr', 'config','common.recallModel','common.utils'];
 
-function fdaService($http, $q, toastr, config,recallModel,utils) {
+function fdaService($http, $q, $analytics, toastr, config,recallModel,utils) {
     // internal vars
     var perBatchAmount = 100;
     var recalls = [];
@@ -37,7 +37,7 @@ function fdaService($http, $q, toastr, config,recallModel,utils) {
         var request = $http.get(url);
 
         request.then(function(response){
-
+            $analytics.eventTrack('GetRecallsSuccess', {  category: 'RecallsService', label: recallType + ' Successful request' });
             totalCount = response.data.meta.results.total > 5000 ? 5000 : response.data.meta.results.total;
 
 
@@ -58,6 +58,7 @@ function fdaService($http, $q, toastr, config,recallModel,utils) {
 
         },function(response){
             toastr.error('Get Recalls Failed', 'Error');
+            $analytics.eventTrack('GetRecallsFail', {  category: 'RecallsService', label: recallType + ' Failed request' });
         });
 
         return request;
@@ -71,7 +72,7 @@ function fdaService($http, $q, toastr, config,recallModel,utils) {
         var request = $http.get(url);
 
         return request.then(function(response){
-
+            $analytics.eventTrack('GetRecallInfoSuccess', {  category: 'RecallsService', label: recallType + '[' + skip + ']' + ' Successful request' });
             angular.forEach(response.data.results , function(resultInfo) {
 
                 recalls.push(recallModel.create(resultInfo));
@@ -81,6 +82,7 @@ function fdaService($http, $q, toastr, config,recallModel,utils) {
 
         },function(response){
             toastr.error('Get Recall Info Failed', 'Error');
+            $analytics.eventTrack('GetRecallInfoFail', {  category: 'RecallsService', label: recallType + '[' + skip + ']' + ' Failed request' });
         });
 
     }

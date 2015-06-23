@@ -4,7 +4,7 @@
 'use strict'
 
 describe('recalls Controller', function () {
-    var controller, scope, _fdaService;
+    var controller, scope, _fdaService, _$analytics;
     var _$q, $rootScope, $controller;
 
     var getRecallsSpy;
@@ -19,14 +19,14 @@ describe('recalls Controller', function () {
         );
     }
 
-    beforeEach(module('commonModule', 'recallsModule','toastr','configModule','ui.router'));
+    beforeEach(module('commonModule', 'recallsModule','toastr','configModule','ui.router','angulartics', 'angulartics.google.analytics'));
 
-    beforeEach(inject(['$q', '$controller', '$rootScope', 'common.fdaService',
-        function (_$q_, _$controller_, _$rootScope_, _fdaService_) {
+    beforeEach(inject(['$q', '$controller','$analytics', '$rootScope', 'common.fdaService',
+        function (_$q_, _$controller_, _$analytics_, _$rootScope_, _fdaService_) {
             _$q = _$q_;
             $controller = _$controller_;
             scope = _$rootScope_.$new();
-
+            _$analytics = _$analytics_;
             _fdaService = _fdaService_;
 
 
@@ -43,10 +43,17 @@ describe('recalls Controller', function () {
             _$rootScope_.$apply();
         }]));
 
+    beforeEach(function () {
+        sinon.stub(_$analytics,'eventTrack',function(){
+            return;
+        });
+    });
+
     afterEach(function () {
 
 
         _fdaService.getRecallInfo.restore();
+        _$analytics.eventTrack.restore();
     });
 
     it('should be defined', function () {
