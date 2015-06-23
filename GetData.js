@@ -113,6 +113,7 @@ function triggerFetch(btnType) {
 
 
 function fetchData(btnType, perBatchAmt, currentCnt) {
+    alert(btnType);
     $.ajax({ // ajax call starts
         url: 'http://api.fda.gov/' + btnType + '/enforcement.json?&limit=' + perBatchAmt + '&skip=' + currentCnt,
         dataType: 'json' // Choosing a JSON datatype
