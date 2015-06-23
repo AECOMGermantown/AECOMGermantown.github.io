@@ -123,6 +123,8 @@ function fetchData(btnType, perBatchAmt, currentCnt) {
         alert("Ajax failed to fetch data in fetchData");
     })
     .done(function (data) { // Variable data contains the data we get from serverside
+        //Clear the resultsObject
+        resultsObject = {};
         for (var j in data.results) {
             recallArray.push(
                 new Recall(
