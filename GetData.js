@@ -124,7 +124,7 @@ function fetchData(btnType, perBatchAmt, currentCnt) {
     })
     .done(function (data) { // Variable data contains the data we get from serverside
         //Clear the resultsObject
-        resultsObject = {};
+        Object.keys(resultsObject).length = 0;
         for (var j in data.results) {
             recallArray.push(
                 new Recall(
