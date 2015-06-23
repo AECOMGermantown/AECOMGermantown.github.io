@@ -147,6 +147,7 @@ function fetchData(btnType, perBatchAmt, currentCnt) {
 function updateResults(key) {
     //If the key already exists increment the value by 1
     //Otherwise add a new key/value pair
+    alert(key);
     if (key in resultsObject) {
         resultsObject[key] = resultsObject[key] + 1;
     }
