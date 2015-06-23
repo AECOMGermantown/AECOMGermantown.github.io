@@ -4,18 +4,18 @@ AECOM Prototype Agile Development Approach -
 
 Link to publicaly accessible prototype - insert link here
 
-The AECOM team used a combination of Agile Scrum ad DevOps engineering techniques to facilitate a 1-week sprint to coordinate prototype project setup and elaboraiton of requirements, design, development, testing, user accecptance testing, and installation activities. 
+The AECOM team used a combination of Agile Scrum ad DevOps engineering techniques to facilitate a 1-week sprint to coordinate the prototype project. This included intial project setup and elaboraiton of requirements, design, development, testing, user accecptance testing, and installation activities. 
 
-Plan: 1 week sprint using Scrum 
-Team: 
+An Agile team was formed with specfic roles assigned based on the following breakout: 
 
 Product Manager - John Keister
 Technical Architect - David McEnderfer
 Back End Web Developer - Charles Tsai
-Back End Web Developer - Yong Seah
 Front End Web Developer -  Trevor Plumley
+Front End Web Developer - Alex Bostic
 Interaction Designer - Chris Litz 
-Usability Tester - Raqulle Carter 
+Usability Tester - Raqulle Carter
+DevOps Engineer - Manuel Sanchez
 
 
 Day 1: 
