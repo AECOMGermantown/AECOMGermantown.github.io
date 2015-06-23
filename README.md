@@ -1,7 +1,10 @@
 # GSA-Prototype
 
+AECOM Prototype Agile Development Approach - 
 
----Document Agile Prototype Process--- 750 Words Max
+Link to publicaly accessible prototype - insert link here
+
+The AECOM team used a combination of Agile Scrum ad DevOps engineering techniques to facilitate a 1-week sprint to coordinate prototype project setup and elaboraiton of requirements, design, development, testing, user accecptance testing, and installation activities. 
 
 Plan: 1 week sprint using Scrum 
 Team: 
