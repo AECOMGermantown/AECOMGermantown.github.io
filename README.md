@@ -21,9 +21,17 @@ Through an iterative process we identified the best fit open-source technology t
 
 - WebStorm IDE for JavaScript, CSS & HTML prototype development
 - Leaflet/Mapbox as an open source mapping API
+- Angular JS for the applicaiton framework
+- SASS as the CSS precompiler
+- Angualr UI router, angular-toastr, angular-bootstrap, and lodash for web development libraries
 - Jenkins for continous integration 
 - Gulp for compilation and builds 
 - Karma, Jasmine, Sinon, and Protractor as a set of automated unit testing for JavaScript and Angular
+- Github repository with a stream setup based on GitFlow
+- Ubuntu web server running Nginx on AWS
+- Zabbix for continuous applicaiton monitoring
+- Docker as the application container
+- Bower & NPM as the Web Package Manager 
 - 
 
 Day 1: 
