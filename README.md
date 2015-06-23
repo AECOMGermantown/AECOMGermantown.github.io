@@ -36,7 +36,7 @@ Initial kick-off meeting with team to discuss the scope of work and initial idea
 Held formal planning meeting, setup scrum board and reviewed visual data driven options (map, charts, etc.). Reviewed openFDA API data sets for consistency and realible data points that we could use to relate the information in a usable format that would benefit the end user. Began to setup user stories based on ideas idenitified during planning.  
 
 Day 2:
-Created initial design comp based on options discussed in planning session. Initial dev mockup was done in real-time, with paired programming techniques to share ideas and implement changes. Backend developers created algorithms to pull necessary content from openFDA API for food, drugs, and devices. Implemented changes in heat map design. 
+Created design comp and sytle guide based on options discussed in planning session. Initial dev mockup was done in real-time, with paired programming techniques to share ideas and implement changes. Backend developers created algorithms to pull necessary content from openFDA API for food, drugs, and devices. Implemented changes in heat map design. 
 
 Day 3:
 Reviewed latest version of the prototype 
