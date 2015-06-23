@@ -17,6 +17,14 @@ Interaction Designer - Chris Litz
 Usability Tester - Raqulle Carter
 DevOps Engineer - Manuel Sanchez
 
+Through an iterative process we identified the best fit open-source technology tool chain to support development, with a focus on automation and continuous integration. The following tool chain was setup for the prototype project 
+
+- WebStorm IDE for JavaScript, CSS & HTML prototype development
+- Leaflet/Mapbox as an open source mapping API
+- Jenkins for continous integration 
+- Gulp for compilation and builds 
+- Karma, Jasmine, Sinon, and Protractor as a set of automated unit testing for JavaScript and Angular
+- 
 
 Day 1: 
 9:30 am  - Initial Kick-off meeting with team to discuss the scope of work and initial ideas, materials to review, etc. 
