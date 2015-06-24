@@ -8,19 +8,20 @@ Product Manager, Technical Architect, Back End Web Developer, Front End Web Deve
 
 Through an iterative process we identified the best fit open-source technology tool chain to support development, with a focus on automation and continuous integration. The following tool chain was setup for the prototype project:
 
-WebStorm IDE for JavaScript, CSS & HTML prototype development
-Leaflet/Mapbox as an open source mapping API
-Angular JS for the applicaiton framework
-SASS as the CSS precompiler
-Angualr UI router, angular-toastr, angular-bootstrap, and lodash for web development libraries
-Jenkins for continous integration
-Gulp for compilation and builds
-Karma, Jasmine, Sinon, and Protractor as a set of automated unit testing for JavaScript and Angular
-Github repository with a stream setup based on GitFlow
-Ubuntu web server running Nginx on AWS
-Zabbix for continuous applicaiton monitoring
-Docker as the application container
-Bower & NPM as the Web Package Manager
+- WebStorm IDE for JavaScript, CSS & HTML prototype development
+- Leaflet/Mapbox as an open source mapping API
+- Angular JS for the applicaiton framework
+- SASS as the CSS precompiler
+- Angualr UI router, angular-toastr, angular-bootstrap, and lodash for web development libraries
+- Jenkins for continous integration
+- Gulp for compilation and builds
+- Karma, Jasmine, Sinon, and Protractor as a set of automated unit testing for JavaScript and Angular
+- Github repository with a stream setup based on GitFlow
+- Ubuntu web server running Nginx on AWS
+- Zabbix for continuous applicaiton monitoring
+- Docker as the application container
+- Bower & NPM as the Web Package Manager
+
 The 1-week sprint to build the prototype proceeded as follows:
 
 Sprint Day 1: Initial kick-off meeting with team to discuss the scope of work and initial ideas, materials to review, etc. Held formal planning meeting, setup scrum board and reviewed open-source visual data driven options (map, charts, etc.). Reviewed openFDA API data sets for consistency and realible data points that we could use to relate the information in a usable format that would benefit the end user. Began to setup user stories based on ideas idenitified during brainstorming planning session.
