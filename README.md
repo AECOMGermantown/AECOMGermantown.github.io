@@ -2,7 +2,7 @@
 
 The AECOM team used a combination of Agile Scrum ad DevOps engineering techniques to facilitate a 1-week sprint to coordinate the prototype project. This included initial project setup and elaboration of requirements, design, development, testing, user acceptance testing, and installation activities. 
 
-We quickly assembled an Scrum team and had them work closely together (mostly collocated, but some distributed). The following team was created to support the prototype project, which incorporated many of the labor categories required under labor pool three (full stack). 
+We quickly assembled a Scrum team and had them work closely together (mostly collocated, but some distributed). The following team was created to support the prototype project, which incorporated many of the labor categories required under labor pool three (full stack). 
 
 Product Manager (John Keister),
 Technical Architect (David McEnderfer),
