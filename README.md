@@ -44,10 +44,13 @@ Day 4:
 Updated mapping design and color scheme based on iterative design comp. Drafted installation steps for server and deploying the web site. 
 
 Day 5: 
+Incorporated openFDA API data set and counts by state for recalls in the heat map. Fined tuned the application for mobile devices and responsive design. Reviewed latest prototype functionality and shared ideas on minor changes to zooming functionality. 
 
-Day 6: Conducted usability tests with new site users on both laptop and mobile devices. Reviewed feedback and incorporate minor changes to the initial design. 
+Day 6: 
+Conducted usability tests with new site users on both laptop and mobile devices. Reviewed feedback and incorporate minor changes to the initial design. 
 
-Day 7: Final product review and Product Owner acceptance. Completed RFQ requirements and submitted proposal. 
+Day 7: 
+Final product review and Product Owner acceptance. Completed RFQ requirements and submitted proposal. 
 
 AECOM Criteria/Evidence: 
 
