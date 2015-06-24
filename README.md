@@ -56,7 +56,7 @@ AECOM Criteria/Evidence:
 
 3)Held brainstorming sessions with the Product Owner to define initial user stories; conducated usability testing on laptops and mobile devices.  
 
-4)Responsive design, ...... 
+4)Responsive design, Photoshop for design comps, Visio for wireframes
 
 5) Design style guide (GSA_FDA_Proto_StyleGuide_v.1.pdf) is located in the prototype_comps folder in the GitHub repo
 
