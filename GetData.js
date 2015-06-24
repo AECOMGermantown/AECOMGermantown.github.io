@@ -35,7 +35,7 @@ function Recall(rNum, reason, status, initDate, state, prodType, prodDescription
 function getList() {
     for (var i = 0; i < recallArray.length; i++)
         $('#listInfo').append(i + ': ' + recallArray[i].recall_number + ', ' + recallArray[i].classification + '<br/>');
-        alert(resultsObject['CT']);
+        alert(resultsObject['MD']);
 }
 
 function getLkupList() {
