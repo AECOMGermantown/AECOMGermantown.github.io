@@ -48,15 +48,15 @@ Day 6:
 
 Day 7: Final product review, completed RFQ requirements and submitted proposal. 
 
-Criteria/Evidence: 
+AECOM Criteria/Evidence: 
+
 1)AECOM dedicated a Product Manager to the prototype project - John Keister 
 
-2) Formed an Agile Scrum team with 7 of the LCAT's in labor pool three (full stack)
+2)Formed an Agile Scrum team with 7 of the LCAT's in labor pool three (full stack)
 
-3)Held brainstorming sessiosn with the Product Owner to define initial user stories; conducated usability testing on laptops and mobile devices.  
+3)Held brainstorming sessions with the Product Owner to define initial user stories; conducated usability testing on laptops and mobile devices.  
 
-4)Used at least three "human-centered design" techniques or tools
-Evidence- 
+4)Responsive design, ...... 
 
 5) Design style guide (GSA_FDA_Proto_StyleGuide_v.1.pdf) is located in the prototype_comps folder in the GitHub repo
 
@@ -75,26 +75,19 @@ Evidence-
 
 12) Setup Jenkins as the continuous deployment server that pushed updates to Nginx server in AWS cloud. 
 
-13) set up or used configuration management
-Evidence- used GitHub repo for merging changes and tracked user stories through GitHub issues 
+13) Used GitHub repo for merging changes and tracked user stories through GitHub issues 
 
-14) set up or used continuous monitoring
-Evidence- 
+14) Zabbix for continuous applicaiton monitoring
 
-15) deploy their software in a container (i.e., utilized operating-system-level virtualization)
-Evidence- 
+15) Docker as the application container 
 
-16) make use of a API, by either consuming or providing one RESTfully.
-Evidence- 
+16) openFDA API, Leaflet open-source mapping API
 
-17) used an iterative approach, where feedback informed subsequent work or versions of the prototype
-Evidence- 
+17) Agile Scrum, conducted daily demonstrations to review and incorporate improvements 
 
 18) provided sufficient documentation to install and run their prototype on another machine
-Evidence- 
-
-19) prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge
-Evidence- 
+ 
+19) All the tools AECOM used in building the prototype are open-source and freely available
 
 
 
