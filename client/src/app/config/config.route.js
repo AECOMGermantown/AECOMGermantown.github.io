@@ -17,7 +17,7 @@ app.config(function($stateProvider, $urlRouterProvider){
         .state('map', {
             url: "/map",
             templateUrl: "map/map.tpl.html",
-            caption: "Map",
+            caption: "Population Map",
             navOrder:1
         })
 
