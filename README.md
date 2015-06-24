@@ -1,12 +1,19 @@
-# GSA-Prototype
-
-AECOM Prototype Agile Development Approach - 
-
-Link to publicly accessible prototype - insert link here
+# GSA-Prototype - Link to publicly accessible prototype - http://52.11.38.94/
 
 The AECOM team used a combination of Agile Scrum ad DevOps engineering techniques to facilitate a 1-week sprint to coordinate the prototype project. This included initial project setup and elaboration of requirements, design, development, testing, user acceptance testing, and installation activities. 
 
+We quickly assembled an Scrum team and had them work closely together (mostly collocated, but some distributed). The following team was created to support the prototype project, which incorporated many of the labor categories required under labor pool three (full stack). 
+
+Product Manager (John Keister),
+Technical Architect (David McEnderfer),
+Back End Web Developer (Charles Tsai), 
+Front End Web Developer (Trevor Plumley), 
+Front End Web Developer (Alex Bostic),
+Interaction Designer (Chris Litz),
+DevOps Engineer (Manuel Sanchez)
+
 Through an iterative process we identified the best fit open-source technology tool chain to support development, with a focus on automation and continuous integration. The following tool chain was setup for the prototype project:
+
 - WebStorm IDE for JavaScript, CSS & HTML prototype development
 - Leaflet/Mapbox as an open source mapping API
 - Angular JS for the applicaiton framework
@@ -41,52 +48,32 @@ Day 6:
 
 Day 7: Final product review, completed RFQ requirements and submitted proposal. 
 
-
 Criteria/Evidence: 
-1) Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted. 
-Evidence - Dedicated a Product Manager to the prototype project - John Keister 
+1)AECOM dedicated a Product Manager to the prototype project - John Keister 
 
-2) Assembled a multidisciplinary and collaborative team including a minimum of 5 labor categories from the Development Pool labor categories to design and develop the prototype
+2) Formed an Agile Scrum team with 7 of the LCAT's in labor pool three (full stack)
 
-Evidence-  used mix of labor categories with the following breakout: 
-Product Manager (John Keister),
-Technical Architect (David McEnderfer),
-Back End Web Developer (Charles Tsai), 
-Front End Web Developer (Trevor Plumley), 
-Front End Web Developer (Alex Bostic),
-Interaction Designer (Chris Litz),
-Usability Tester (Raqulle Carter),
-DevOps Engineer (Manuel Sanchez)
-
-3)Understand what people need, by including people in the prototype development and design process
-Evidence- 
+3)Held brainstorming sessiosn with the Product Owner to define initial user stories; conducated usability testing on laptops and mobile devices.  
 
 4)Used at least three "human-centered design" techniques or tools
 Evidence- 
 
 5) Design style guide (GSA_FDA_Proto_StyleGuide_v.1.pdf) is located in the prototype_comps folder in the GitHub repo
-Evidence- 
 
-6) Conducted usability testing and incorporated feedback into prototype changes  
+6) Held usability testing with open-ended steps for users to follow. Conducted usability tesitng on laptops and mobile devices. 
 Evidence- 
 
 7) Applied Agile Scrum with daily demonstrations where the Product Owner and team provide input on changes. 
-Evidence- 
 
-8) created a prototype that works on multiple devices, and presents a responsive design
-Evidence- 
+8) Prototype is responsive and works on multiple devices
 
 9) Jenkins, WebStorm IDE, Gulp, Docker, Angular JS. See full list in Read.me introduction. 
-Evidence- 
 
-10) deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as a Service (PaaS) provider, and indicated which provider they used
-Evidence- 
+10) Deployed on Nginx server hosted in AWS cloud
 
-11) wrote unit tests for their code
-Evidence- 
+11) Unit tests were scripted in Karma, Jasmine, Sinon, and Protractor 
 
-12) set up or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider
-Evidence- 
+12) Setup Jenkins as the continuous deployment server that pushed updates to Nginx server in AWS cloud. 
 
 13) set up or used configuration management
 Evidence- used GitHub repo for merging changes and tracked user stories through GitHub issues 
