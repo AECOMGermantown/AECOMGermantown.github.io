@@ -20,7 +20,7 @@ function mapInfo(L,utils) {
 
 
 
-            var info = L.control();
+            var info = L.control({position: 'bottomright'});
 
             info.onAdd = function (map) {
                 this._div = L.DomUtil.create('div', 'info');

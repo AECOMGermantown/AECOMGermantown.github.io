@@ -17,12 +17,12 @@ function mapLegend(L,utils) {
         },
         link: function postLink(scope, elem) {
 
-            var legend = L.control({position: 'bottomright'});
+            var legend = L.control({position: 'topright'});
 
             legend.onAdd = function (map) {
 
                 var div = L.DomUtil.create('div', 'info legend'),
-                    grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+                    grades = [0, 100, 250, 500, 1000],
                     labels = [],
                     from, to;
 

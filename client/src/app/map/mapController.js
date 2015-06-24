@@ -18,9 +18,7 @@ function mapController(L,config,utils) {
 
         L.mapbox.accessToken = config.mbKey;
         // Replace 'mapbox.streets' with your map id.
-        var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
-            attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
-        });
+        var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken);
 
 
         vm.map = L.map('map')
@@ -37,11 +35,11 @@ function mapController(L,config,utils) {
 
     function style(feature) {
         return {
-            weight: 2,
+            weight: 3,
             opacity: 1,
-            color: 'white',
-            dashArray: '3',
-            fillOpacity: 0.7,
+            color: '#9c0880',
+            dashArray: '0',
+            fillOpacity: 1,
             fillColor: utils.getColor(feature.properties.density)
         };
     }
@@ -50,10 +48,11 @@ function mapController(L,config,utils) {
         var layer = e.target;
 
         layer.setStyle({
-            weight: 5,
-            color: '#666',
+            weight: 3,
+            color: '#9c0880',
             dashArray: '',
-            fillOpacity: 0.7
+            fillOpacity: 1,
+            fillColor: '#9c0880'
         });
 
         if (!L.Browser.ie && !L.Browser.opera) {
@@ -75,8 +74,8 @@ function mapController(L,config,utils) {
     function onEachFeature(feature, layer) {
         layer.on({
             mouseover: highlightFeature,
-            mouseout: resetHighlight,
-            click: zoomToFeature
+            mouseout: resetHighlight
+            // click: zoomToFeature
         });
     }
 
