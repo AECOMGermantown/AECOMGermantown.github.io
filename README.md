@@ -28,25 +28,26 @@ Through an iterative process we identified the best fit open-source technology t
 - Docker as the application container
 - Bower & NPM as the Web Package Manager 
 
-Day 1: 
+The 1-week sprint to build the prototype proceeded as follows: 
+
+Sprint Day 1: 
 Initial kick-off meeting with team to discuss the scope of work and initial ideas, materials to review, etc. 
-Held formal planning meeting, setup scrum board and reviewed visual data driven options (map, charts, etc.). Reviewed openFDA API data sets for consistency and realible data points that we could use to relate the information in a usable format that would benefit the end user. Began to setup user stories based on ideas idenitified during planning.  
+Held formal planning meeting, setup scrum board and reviewed open-source visual data driven options (map, charts, etc.). Reviewed openFDA API data sets for consistency and realible data points that we could use to relate the information in a usable format that would benefit the end user. Began to setup user stories based on ideas idenitified during brainstorming planning session.  
 
-Day 2:
-Created design comp and sytle guide based on options discussed in planning session. Initial dev mockup was done in real-time, with paired programming techniques to share ideas and implement changes. Backend developers created algorithms to pull necessary content from openFDA API for food, drugs, and devices. Implemented changes in heat map design. 
+Sprint Day 2:
+Created design comp and sytle guide based on options discussed in planning session. Initial dev mockup was done in real-time, with paired programming techniques to share ideas and implement changes. Backend developers created algorithms to pull necessary content from openFDA API for food, drugs, and devices. Implemented changes in first draft of the heat map design. 
 
-Day 3:
-Reviewed latest version of the prototype 
-Setup Google Analystics to support UAT and collect feeback on user nagivation. 
+Sprint Day 3:
+Reviewed latest version of the prototype. Completed envrionment setup with Jenkins and Nginx to host the site. Published publically accessbile link. Setup Google Analystics to support UAT and collect feeback on user nagivation. Refined initial site design based on limitations identified with API data sets and simplified the search function. 
 
 Day 4: 
-Updated mapping design based style guide and 
+Updated mapping design and color scheme based on iterative design comp. Drafted installation steps for server and deploying the web site. 
 
 Day 5: 
 
-Day 6: 
+Day 6: Conducted usability tests with new site users on both laptop and mobile devices. Reviewed feedback and incorporate minor changes to the initial design. 
 
-Day 7: Final product review, completed RFQ requirements and submitted proposal. 
+Day 7: Final product review and Product Owner acceptance. Completed RFQ requirements and submitted proposal. 
 
 AECOM Criteria/Evidence: 
 
