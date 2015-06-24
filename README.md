@@ -4,13 +4,13 @@ The AECOM team used a combination of Agile Scrum ad DevOps engineering technique
 
 We quickly assembled a Scrum team and had them work closely together (mostly collocated, but some distributed). The following team was created to support the prototype project, which incorporated many of the labor categories required under labor pool three (full stack). 
 
-Product Manager (John Keister),
-Technical Architect (David McEnderfer),
-Back End Web Developer (Charles Tsai), 
-Front End Web Developer (Trevor Plumley), 
-Front End Web Developer (Alex Bostic),
-Interaction Designer (Chris Litz),
-DevOps Engineer (Manuel Sanchez)
+Product Manager,
+Technical Architect,
+Back End Web Developer, 
+Front End Web Developer,
+Front End Web Developer,
+Interaction Designer,
+DevOps Engineer
 
 Through an iterative process we identified the best fit open-source technology tool chain to support development, with a focus on automation and continuous integration. The following tool chain was setup for the prototype project:
 
@@ -54,7 +54,7 @@ Final product review and Product Owner acceptance. Completed RFQ requirements an
 
 AECOM Criteria/Evidence: 
 
-1)AECOM dedicated a Product Manager to the prototype project - John Keister 
+1)AECOM dedicated a Product Manager to the prototype project
 
 2)Formed an Agile Scrum team with 7 of the LCAT's in labor pool three (full stack)
 
