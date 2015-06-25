@@ -1,128 +1,60 @@
-# GSA-Prototype
+GSA-Prototype - Link to publicly accessible prototype - http://52.11.38.94/
 
-AECOM Prototype Agile Development Approach - 
+The AECOM team used a combination of Agile Scrum ad DevOps engineering techniques to facilitate a 1-week sprint to coordinate the prototype project. This included initial project setup and elaboration of requirements, design, development, testing, user acceptance testing, and installation activities.
 
-Link to publicly accessible prototype - insert link here
+We quickly assembled a Scrum team and had them work closely together (mostly collocated, but some distributed). The following team was created to support the prototype project, which incorporated many of the labor categories required under labor pool three (full stack).
 
-The AECOM team used a combination of Agile Scrum ad DevOps engineering techniques to facilitate a 1-week sprint to coordinate the prototype project. This included initial project setup and elaboration of requirements, design, development, testing, user acceptance testing, and installation activities. 
+Product Manager, Technical Architect, Back End Web Developer, Front End Web Developer, Front End Web Developer, Interaction Designer, DevOps Engineer
 
 Through an iterative process we identified the best fit open-source technology tool chain to support development, with a focus on automation and continuous integration. The following tool chain was setup for the prototype project:
+
 - WebStorm IDE for JavaScript, CSS & HTML prototype development
 - Leaflet/Mapbox as an open source mapping API
 - Angular JS for the applicaiton framework
 - SASS as the CSS precompiler
 - Angualr UI router, angular-toastr, angular-bootstrap, and lodash for web development libraries
-- Jenkins for continous integration 
-- Gulp for compilation and builds 
+- Jenkins for continous integration
+- Gulp for compilation and builds
 - Karma, Jasmine, Sinon, and Protractor as a set of automated unit testing for JavaScript and Angular
 - Github repository with a stream setup based on GitFlow
 - Ubuntu web server running Nginx on AWS
 - Zabbix for continuous applicaiton monitoring
-- Docker as the application container
-- Bower & NPM as the Web Package Manager 
+- Vargrant as the application container
+- Bower & NPM as the Web Package Manager
 
-Day 1: 
-Initial kick-off meeting with team to discuss the scope of work and initial ideas, materials to review, etc. 
-Held formal planning meeting, setup scrum board and reviewed visual data driven options (map, charts, etc.). Reviewed openFDA API data sets for consistency and realible data points that we could use to relate the information in a usable format that would benefit the end user. Began to setup user stories based on ideas idenitified during planning.  
+The 1-week sprint to build the prototype proceeded as follows:
 
-Day 2:
-Created design comp and sytle guide based on options discussed in planning session. Initial dev mockup was done in real-time, with paired programming techniques to share ideas and implement changes. Backend developers created algorithms to pull necessary content from openFDA API for food, drugs, and devices. Implemented changes in heat map design. 
+Sprint Day 1: Initial kick-off meeting with team to discuss the scope of work and initial ideas, materials to review, etc. Held formal planning meeting, setup scrum board and reviewed open-source visual data driven options (map, charts, etc.). Reviewed openFDA API data sets for consistency and realible data points that we could use to relate the information in a usable format that would benefit the end user. Began to setup user stories based on ideas idenitified during brainstorming planning session.
 
-Day 3:
-Reviewed latest version of the prototype 
-Setup Google Analystics to support UAT and collect feeback on user nagivation. 
+Sprint Day 2: Created design comp and sytle guide based on options discussed in planning session. Initial dev mockup was done in real-time, with paired programming techniques to share ideas and implement changes. Backend developers created algorithms to pull necessary content from openFDA API for food, drugs, and devices. Implemented changes in first draft of the heat map design.
 
-Day 4: 
-Updated mapping design based style guide and 
+Sprint Day 3: Reviewed latest version of the prototype. Completed envrionment setup with Jenkins and Nginx to host the site. Published publically accessbile link. Setup Google Analystics to support UAT and collect feeback on user nagivation. Refined initial site design based on limitations identified with API data sets and simplified the search function.
 
-Day 5: 
+Day 4: Updated mapping design and color scheme based on iterative design comp. Drafted installation steps for server and deploying the web site.
 
-Day 6: 
+Day 5: Incorporated openFDA API data set and counts by state for recalls in the heat map. Fined tuned the application for mobile devices and responsive design. Reviewed latest prototype functionality and shared ideas on minor changes to zooming functionality.
 
-Day 7: Final product review, completed RFQ requirements and submitted proposal. 
+Day 6: Conducted usability tests with new site users on both laptop and mobile devices. Reviewed feedback and incorporate minor changes to the initial design.
 
+Day 7: Final product review and Product Owner acceptance. Completed RFQ requirements and submitted proposal.
 
-Criteria/Evidence: 
-1) Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted. 
-Evidence - Dedicated a Product Manager to the prototype project - John Keister 
-
-2) Assembled a multidisciplinary and collaborative team including a minimum of 5 labor categories from the Development Pool labor categories to design and develop the prototype
-
-Evidence-  used mix of labor categories with the following breakout: 
-Product Manager (John Keister),
-Technical Architect (David McEnderfer),
-Back End Web Developer (Charles Tsai), 
-Front End Web Developer (Trevor Plumley), 
-Front End Web Developer (Alex Bostic),
-Interaction Designer (Chris Litz),
-Usability Tester (Raqulle Carter),
-DevOps Engineer (Manuel Sanchez)
-
-3)Understand what people need, by including people in the prototype development and design process
-Evidence- 
-
-4)Used at least three "human-centered design" techniques or tools
-Evidence- 
-
-5) Design style guide (GSA_FDA_Proto_StyleGuide_v.1.pdf) is located in the prototype_comps folder in the GitHub repo
-Evidence- 
-
-6) Conducted usability testing and incorporated feedback into prototype changes  
-Evidence- 
-
-7) Applied Agile Scrum with daily demonstrations where the Product Owner and team provide input on changes. 
-Evidence- 
-
-8) created a prototype that works on multiple devices, and presents a responsive design
-Evidence- 
-
-9) Jenkins, WebStorm IDE, Gulp, Docker, Angular JS. See full list in Read.me introduction. 
-Evidence- 
-
-10) deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as a Service (PaaS) provider, and indicated which provider they used
-Evidence- 
-
-11) wrote unit tests for their code
-Evidence- 
-
-12) set up or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider
-Evidence- 
-
-13) set up or used configuration management
-Evidence- used GitHub repo for merging changes and tracked user stories through GitHub issues 
-
-14) set up or used continuous monitoring
-Evidence- 
-
-15) deploy their software in a container (i.e., utilized operating-system-level virtualization)
-Evidence- 
-
-16) make use of a API, by either consuming or providing one RESTfully.
-Evidence- 
-
-17) used an iterative approach, where feedback informed subsequent work or versions of the prototype
-Evidence- 
-
-18) provided sufficient documentation to install and run their prototype on another machine
-Evidence- 
-
-19) prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge
-Evidence- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+AECOM Criteria/Evidence:
+- 1)AECOM dedicated a Product Manager to the prototype project
+- 2)Formed an Agile Scrum team with 7 of the LCAT's in labor pool three (full stack)
+- 3)Held brainstorming sessions with the Product Owner to define initial user stories; conducated usability testing on laptops and mobile devices.
+- 4)Responsive design, Photoshop for design comps, Visio for wireframes
+- 5) Design style guide (GSA_FDA_Proto_StyleGuide_v.1.pdf) is located in the prototype_comps folder in the GitHub repo.
+- 6) Held usability testing on multiple devices with open-ended steps. 
+- 7) Applied Agile Scrum with daily demo's where the Product Owner and team provide input on changes.
+- 8) Prototype is responsive and works on multiple devices
+- 9) Jenkins, WebStorm IDE, Gulp, Vagrant, Angular JS. See full list in Read.me introduction.
+- 10) Deployed on Nginx server hosted in AWS cloud
+- 11) Unit tests were scripted in Karma/Jasmine/Sinon/Protractor
+- 12) Setup Jenkins with updates deplpyed to Nginx server hosted in AWS cloud.
+- 13) Used GitHub repo for merging changes and tracked user stories through GitHub issues
+- 14) Zabbix for continuous applicaiton monitoring
+- 15) Vagrant as the application container
+- 16) Leaflet mapping API
+- 17) Agile Scrum, conducted daily demon's to review and incorporate improvements
+- 18) provided sufficient documentation to install and run their prototype on another machine
+- 19) All the tools AECOM used in building the prototype are open-source and freely available
