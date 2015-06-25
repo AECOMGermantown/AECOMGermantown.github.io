@@ -19,7 +19,7 @@ Through an iterative process we identified the best fit open-source technology t
 - Github repository with a stream setup based on GitFlow
 - Ubuntu web server running Nginx on AWS
 - Zabbix for continuous applicaiton monitoring
-- Docker as the application container
+- Vargrant as the application container
 - Bower & NPM as the Web Package Manager
 
 The 1-week sprint to build the prototype proceeded as follows:
@@ -47,13 +47,13 @@ AECOM Criteria/Evidence:
 - 6) Held usability testing on multiple devices with open-ended steps. 
 - 7) Applied Agile Scrum with daily demo's where the Product Owner and team provide input on changes.
 - 8) Prototype is responsive and works on multiple devices
-- 9) Jenkins, WebStorm IDE, Gulp, Docker, Angular JS. See full list in Read.me introduction.
+- 9) Jenkins, WebStorm IDE, Gulp, Vagrant, Angular JS. See full list in Read.me introduction.
 - 10) Deployed on Nginx server hosted in AWS cloud
 - 11) Unit tests were scripted in Karma/Jasmine/Sinon/Protractor
 - 12) Setup Jenkins with updates deplpyed to Nginx server hosted in AWS cloud.
 - 13) Used GitHub repo for merging changes and tracked user stories through GitHub issues
 - 14) Zabbix for continuous applicaiton monitoring
-- 15) Docker as the application container
+- 15) Vagrant as the application container
 - 16) Leaflet mapping API
 - 17) Agile Scrum, conducted daily demon's to review and incorporate improvements
 - 18) provided sufficient documentation to install and run their prototype on another machine
