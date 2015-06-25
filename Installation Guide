@@ -1,1 +1,25 @@
+Installation Instructions: 
 
+Requirements:
+·         Install Virtualbox for your operating system https://www.virtualbox.org/wiki/Downloads
+·         Install Vagrant for your operating system https://www.vagrantup.com/downloads.html
+·         Make sure your operating system is 64 bits and your computer has Virtualization enabled in the BIOS (by default Virtualization is disabled in the BIOS)
+Development Environment creation:
+·         Download the attached Vagrantfile and place it inside the folder you want to use as your Project home ( i.e.  C:\projects\gsa\  or  /projects/gsa/ ). 
+·         Provision the environment typing in:    vagrant up --provision  inside the project folder where the Vagranfile is located (The provisioning time may take some time to download the image and components.)
+
+Connecting to the environment
+·         If you are using Mac/Linux as your host machine, type in vagrant ssh to access the created environment
+·         If you are using Windows, type in vagrant ssh to see the connection information that you will need to use to connect via putty.  You will need to convert the key file displayed using puttygen to be able to connect via putty After the key is converted, load it using putty and then connect as usual
+
+·         Working with the environment
+·         Inside the environment, the folder  /vagrant/  is mapped to the project folder in your host computer ( i.e.   C:\projects\gsa\   or   /projects/gsa/  )
+·         Ports mapped are:
+·         Development box: 22 -->> 2222 on host (if 2222 is unused)
+·         Development box: 80 -->>  8085 on host
+To access the deployed app go to localhost:8085 on your host machine.
+
+Stop /  Start / Delete the project
+·         To stop the current development box, type in  vagrant suspend on your host machine inside the project folder
+·         To resume the current development box, type in  vagrant resume on your host machine inside the project folder
+·         If you want to permanently delete the development box, type in vagrant destroy on your host machine inside the project folder
