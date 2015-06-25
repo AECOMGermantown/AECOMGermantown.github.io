@@ -39,22 +39,22 @@ Day 6: Conducted usability tests with new site users on both laptop and mobile d
 Day 7: Final product review and Product Owner acceptance. Completed RFQ requirements and submitted proposal.
 
 AECOM Criteria/Evidence:
-1)AECOM dedicated a Product Manager to the prototype project
-2)Formed an Agile Scrum team with 7 of the LCAT's in labor pool three (full stack)
-3)Held brainstorming sessions with the Product Owner to define initial user stories; conducated usability testing on laptops and mobile devices.
-4)Responsive design, Photoshop for design comps, Visio for wireframes
-5) Design style guide (GSA_FDA_Proto_StyleGuide_v.1.pdf) is located in the prototype_comps folder in the GitHub repo.
-6) Held usability testing on multiple devices with open-ended steps. 
-7) Applied Agile Scrum with daily demo's where the Product Owner and team provide input on changes.
-8) Prototype is responsive and works on multiple devices
-9) Jenkins, WebStorm IDE, Gulp, Docker, Angular JS. See full list in Read.me introduction.
-10) Deployed on Nginx server hosted in AWS cloud
-11) Unit tests were scripted in Karma/Jasmine/Sinon/Protractor
-12) Setup Jenkins with updates deplpyed to Nginx server hosted in AWS cloud.
-13) Used GitHub repo for merging changes and tracked user stories through GitHub issues
-14) Zabbix for continuous applicaiton monitoring
-15) Docker as the application container
-16) Leaflet mapping API
-17) Agile Scrum, conducted daily demon's to review and incorporate improvements
-18) provided sufficient documentation to install and run their prototype on another machine
-19) All the tools AECOM used in building the prototype are open-source and freely available
+- 1)AECOM dedicated a Product Manager to the prototype project
+- 2)Formed an Agile Scrum team with 7 of the LCAT's in labor pool three (full stack)
+- 3)Held brainstorming sessions with the Product Owner to define initial user stories; conducated usability testing on laptops and mobile devices.
+- 4)Responsive design, Photoshop for design comps, Visio for wireframes
+- 5) Design style guide (GSA_FDA_Proto_StyleGuide_v.1.pdf) is located in the prototype_comps folder in the GitHub repo.
+- 6) Held usability testing on multiple devices with open-ended steps. 
+- 7) Applied Agile Scrum with daily demo's where the Product Owner and team provide input on changes.
+- 8) Prototype is responsive and works on multiple devices
+- 9) Jenkins, WebStorm IDE, Gulp, Docker, Angular JS. See full list in Read.me introduction.
+- 10) Deployed on Nginx server hosted in AWS cloud
+- 11) Unit tests were scripted in Karma/Jasmine/Sinon/Protractor
+- 12) Setup Jenkins with updates deplpyed to Nginx server hosted in AWS cloud.
+- 13) Used GitHub repo for merging changes and tracked user stories through GitHub issues
+- 14) Zabbix for continuous applicaiton monitoring
+- 15) Docker as the application container
+- 16) Leaflet mapping API
+- 17) Agile Scrum, conducted daily demon's to review and incorporate improvements
+- 18) provided sufficient documentation to install and run their prototype on another machine
+- 19) All the tools AECOM used in building the prototype are open-source and freely available
