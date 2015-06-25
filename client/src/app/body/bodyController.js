@@ -1,10 +1,10 @@
 'use strict';
-var header = angular.module('headerModule');
+var body = angular.module('bodyModule');
 
-header.controller('headerController', [ '$scope', '$state', headerController]);
+body.controller('bodyController', [ '$scope', '$state', bodyController]);
 
 
-function headerController( $scope, $state) {
+function bodyController( $scope, $state) {
 
     var vm = this;
 

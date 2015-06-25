@@ -18,7 +18,13 @@ function mapController(L,config,utils) {
 
         L.mapbox.accessToken = config.mbKey;
         // Replace 'mapbox.streets' with your map id.
-        var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken);
+        var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+            maxZoom: 4,
+            dragging: false,
+            touchZoom: false,
+            scrollWheelZoom: false,
+            minZoom: 4
+        });
 
 
         vm.map = L.map('map')
