@@ -4,8 +4,9 @@ var app = angular.module('configModule');
 
 app.config(function($stateProvider, $urlRouterProvider){
 
-    // For any unmatched url, send to /route1
-   $urlRouterProvider.otherwise("/map");
+    // For any unmatched url, send to /route
+    //Don't uncomment this line
+   //$urlRouterProvider.otherwise("/map");
     $stateProvider
        .state('home', {
             url: "/home",
