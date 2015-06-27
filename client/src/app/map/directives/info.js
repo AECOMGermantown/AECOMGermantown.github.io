@@ -18,8 +18,6 @@ function mapInfo(L,utils) {
         },
         link: function postLink(scope, elem) {
 
-
-
             var info = L.control({position: 'bottomright'});
 
             info.onAdd = function (map) {
@@ -29,8 +27,8 @@ function mapInfo(L,utils) {
             };
 
             info.update = function (props) {
-                info._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-                    '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+                info._div.innerHTML = '<h4>US Recall Reports</h4>' +  (props ?
+                    '<b>' + props.name + '</b><br />' + (resultsObject[props.name] !== undefined ? resultsObject[props.name] : '0') + ' Total Reports'
                         : 'Hover over a state');
             };
 
