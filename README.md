@@ -18,7 +18,7 @@ Through an iterative process we identified the best fit open-source technology t
 - Karma, Jasmine, Sinon, and Protractor as a set of automated unit testing for JavaScript and Angular
 - Github repository with a stream setup based on GitFlow
 - Ubuntu web server running Nginx on AWS
-- Zabbix for continuous applicaiton monitoring
+- Monitor.US for continuous applicaiton monitoring
 - Vargrant as the application container
 - Bower & NPM as the Web Package Manager
 
@@ -52,7 +52,7 @@ AECOM Criteria/Evidence:
 - 11) Unit tests were scripted in Karma/Jasmine/Sinon/Protractor
 - 12) Setup Jenkins with updates deplpyed to Nginx server hosted in AWS cloud.
 - 13) Used GitHub repo for merging changes and tracked user stories through GitHub issues
-- 14) Zabbix for continuous applicaiton monitoring
+- 14) Monitor.US for continuous application monitoring
 - 15) Vagrant as the application container
 - 16) Leaflet mapping API
 - 17) Agile Scrum, conducted daily demon's to review and incorporate improvements
