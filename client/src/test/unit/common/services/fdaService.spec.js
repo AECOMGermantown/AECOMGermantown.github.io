@@ -6,7 +6,7 @@
 
 describe('fda Service', function () {
 
-    var _$httpBackend, _$q, _$analytics, _fdaService, _recallModel, _toastr;
+    var _$httpBackend, _$q, _$analytics, _fdaService, _recallModel, _toastr, _config;
 
 
     beforeEach(module('commonModule', 'configModule','toastr','ui.router','angulartics', 'angulartics.google.analytics'));
@@ -16,6 +16,7 @@ describe('fda Service', function () {
             _$httpBackend = _$httpBackend_;
             _$q = _$q_;
             _toastr = _toastr_;
+            _config = _config_;
             _recallModel = _recallModel_;
             _fdaService = _fdaService_;
             _$analytics = _$analytics_;
@@ -49,7 +50,7 @@ describe('fda Service', function () {
             return deferred.promise;
         });
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&limit=1';
+        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=1';
 
         _$httpBackend.expectGET(url).respond(200, JSON.stringify(mockData.getRecallsResults()));
 
@@ -66,7 +67,7 @@ describe('fda Service', function () {
 
         var toastSpy = sinon.spy(_toastr,'error');
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&limit=1';
+        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=1';
 
         _$httpBackend.expectGET(url).respond(500, null);
 
@@ -84,7 +85,7 @@ describe('fda Service', function () {
 
 
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&limit=100&skip=100';
+        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=100&skip=100';
 
         _$httpBackend.expectGET(url).respond(200, JSON.stringify(mockData.getRecallsInfoResults()));
 
@@ -101,7 +102,7 @@ describe('fda Service', function () {
 
         var recallSpy = sinon.spy(_recallModel,'create');
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&limit=100&skip=100';
+        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=100&skip=100';
 
         _$httpBackend.expectGET(url).respond(200, JSON.stringify(mockData.getRecallsInfoResults()));
 
@@ -119,7 +120,7 @@ describe('fda Service', function () {
 
         var toastSpy = sinon.spy(_toastr,'error');
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&limit=100&skip=100';
+        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=100&skip=100';
 
         _$httpBackend.expectGET(url).respond(500, null);
 
