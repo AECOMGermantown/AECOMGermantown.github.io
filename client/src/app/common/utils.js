@@ -22,10 +22,10 @@ function utils (_){
 
     // get color depending on population density value
     function getColor(d) {
-        return d > 1000 ? '#9c0880' :
-            d > 500  ? '#b6459a' :
-                d > 200  ? '#cb71b2' :
-                    d > 100  ? '#dba2cf' :
+        return d > 500 ? '#9c0880' :
+            d > 100  ? '#b6459a' :
+                d > 50  ? '#cb71b2' :
+                    d > 10  ? '#dba2cf' :
                                     '#edd1e7';
     }
 

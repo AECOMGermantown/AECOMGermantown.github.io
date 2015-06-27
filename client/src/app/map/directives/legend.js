@@ -22,7 +22,7 @@ function mapLegend(L,utils) {
             legend.onAdd = function (map) {
 
                 var div = L.DomUtil.create('div', 'info legend'),
-                    grades = [0, 100, 250, 500, 1000],
+                    grades = [0, 10, 50, 100, 500],
                     labels = [],
                     from, to;
 

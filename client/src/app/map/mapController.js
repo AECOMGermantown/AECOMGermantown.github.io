@@ -46,8 +46,9 @@ function mapController(L,config,utils) {
             color: '#9c0880',
             dashArray: '0',
             fillOpacity: 1,
-            fillColor: utils.getColor(feature.properties.density)
+            fillColor: utils.getColor(resultsObject[feature.properties.name])
         };
+        setTimeout(style(), 60000);
     }
 
     function highlightFeature(e) {
@@ -55,10 +56,10 @@ function mapController(L,config,utils) {
 
         layer.setStyle({
             weight: 3,
-            color: '#9c0880',
+            color: '#86036D',
             dashArray: '',
             fillOpacity: 1,
-            fillColor: '#9c0880'
+            fillColor: '#86036D'
         });
 
         if (!L.Browser.ie && !L.Browser.opera) {

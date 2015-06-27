@@ -195,7 +195,7 @@ function triggerFetch(btnType) {
         dataType: 'json' // Choosing a JSON datatype
     })
     .fail(function () {
-        alert("Ajax failed to fetch data in submit");
+        // alert("Ajax failed to fetch data in submit");
     })
     .done(function (data) { // Variable data contains the data we get from serverside
         $('#listInfo').html(''); // Clear div
@@ -227,7 +227,7 @@ function fetchData(btnType, perBatchAmt, currentCnt) {
     })
     .fail(function (data) {
         //debugger;
-        alert("Ajax failed to fetch data in fetchData");
+        // alert("Ajax failed to fetch data in fetchData");
     })
     .done(function (data) { // Variable data contains the data we get from serverside
         //Clear the resultsObject
