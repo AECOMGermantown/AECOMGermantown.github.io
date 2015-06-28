@@ -2,9 +2,9 @@
 var mapMod = angular.module('mapModule');
 
 mapMod.controller('mapController', mapController);
-mapController.$inject = ['L','config','common.utils'];
+mapController.$inject = ['L','config','common.utils','common.fdaService','common.statesRecallsService'];
 
-function mapController(L,config,utils) {
+function mapController(L,config,utils,fdaService,statesRecallsService) {
 
     var vm = this;
 
@@ -16,24 +16,35 @@ function mapController(L,config,utils) {
 
     function activate(){
 
-        L.mapbox.accessToken = config.mbKey;
-        // Replace 'mapbox.streets' with your map id.
-        var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
-            maxZoom: 4,
-            dragging: false,
-            touchZoom: false,
-            scrollWheelZoom: false,
-            minZoom: 4
+
+
+        fdaService.getRecalls('food').then(function(resultRecalls){
+
+
+
+            L.mapbox.accessToken = config.mbKey;
+            // Replace 'mapbox.streets' with your map id.
+            var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+                maxZoom: 4,
+                dragging: false,
+                touchZoom: false,
+                scrollWheelZoom: false,
+                minZoom: 4
+            });
+            vm.mapInfo = statesRecallsService.getStateRecalls();
+
+            vm.map = L.map('map')
+                .addLayer(mapboxTiles).setView([37.8, -96], 4);
+
+            geojson = L.geoJson(config.statesData, {
+                style: style,
+                onEachFeature: onEachFeature
+            }).addTo(vm.map);
+
+
         });
 
 
-        vm.map = L.map('map')
-            .addLayer(mapboxTiles).setView([37.8, -96], 4);
-
-        geojson = L.geoJson(config.statesData, {
-            style: style,
-            onEachFeature: onEachFeature
-        }).addTo(vm.map);
 
 
     }
@@ -46,9 +57,9 @@ function mapController(L,config,utils) {
             color: '#9c0880',
             dashArray: '0',
             fillOpacity: 1,
-            fillColor: utils.getColor(resultsObject[feature.properties.name])
+            fillColor: utils.getColor(vm.mapInfo[feature.properties.name])
         };
-        setTimeout(style(), 60000);
+        //setTimeout(style(), 60000);
     }
 
     function highlightFeature(e) {
