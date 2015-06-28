@@ -28,7 +28,7 @@ function mapInfo(L,utils) {
 
             info.update = function (props) {
                 info._div.innerHTML = '<h4>US Recall Reports</h4>' +  (props ?
-                    '<b>' + props.name + '</b><br />' + (resultsObject[props.name] !== undefined ? resultsObject[props.name] : '0') + ' Total Reports'
+                    '<b>' + props.name + '</b><br />' + (scope.mapInfo[props.name] !== undefined ? scope.mapInfo[props.name] : '0') + ' Total Reports'
                         : 'Hover over a state');
             };
 

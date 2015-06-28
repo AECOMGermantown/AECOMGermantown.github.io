@@ -7,6 +7,7 @@
 describe('fda Service', function () {
 
     var _$httpBackend, _$q, _$analytics, _fdaService, _recallModel, _toastr, _config;
+    var analyticSpy;
 
 
     beforeEach(module('commonModule', 'configModule','toastr','ui.router','angulartics', 'angulartics.google.analytics'));
@@ -24,7 +25,7 @@ describe('fda Service', function () {
         }]));
 
     beforeEach(function () {
-        sinon.stub(_$analytics,'eventTrack',function(){
+        analyticSpy = sinon.stub(_$analytics,'eventTrack',function(){
             return;
         });
     });
@@ -50,7 +51,7 @@ describe('fda Service', function () {
             return deferred.promise;
         });
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=1';
+        var url = 'http://api.fda.gov/food/enforcement.json?api_key=' + _config.fdaKey + '&limit=1';
 
         _$httpBackend.expectGET(url).respond(200, JSON.stringify(mockData.getRecallsResults()));
 
@@ -65,9 +66,9 @@ describe('fda Service', function () {
 
     it('should show toast if request fails',function(){
 
-        var toastSpy = sinon.spy(_toastr,'error');
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=1';
+
+        var url = 'http://api.fda.gov/food/enforcement.json?api_key=' + _config.fdaKey + '&limit=1';
 
         _$httpBackend.expectGET(url).respond(500, null);
 
@@ -75,8 +76,7 @@ describe('fda Service', function () {
         _$httpBackend.flush();
 
 
-        expect(toastSpy.called).toBeTruthy();
-        _toastr.error.restore();
+        expect(analyticSpy.called).toBeTruthy();
 
 
     });
@@ -85,7 +85,7 @@ describe('fda Service', function () {
 
 
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=100&skip=100';
+        var url = 'http://api.fda.gov/food/enforcement.json?api_key=' + _config.fdaKey + '&limit=100&skip=100';
 
         _$httpBackend.expectGET(url).respond(200, JSON.stringify(mockData.getRecallsInfoResults()));
 
@@ -102,7 +102,7 @@ describe('fda Service', function () {
 
         var recallSpy = sinon.spy(_recallModel,'create');
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=100&skip=100';
+        var url = 'http://api.fda.gov/food/enforcement.json?api_key=' + _config.fdaKey + '&limit=100&skip=100';
 
         _$httpBackend.expectGET(url).respond(200, JSON.stringify(mockData.getRecallsInfoResults()));
 
@@ -118,9 +118,9 @@ describe('fda Service', function () {
 
     it('should show toast if request for recall info fails',function(){
 
-        var toastSpy = sinon.spy(_toastr,'error');
+        //var toastSpy = sinon.spy(_$analytics,'eventTrack');
 
-        var url = 'http://api.fda.gov/food/enforcement.json?&' + _config.mbKey + 'limit=100&skip=100';
+        var url = 'http://api.fda.gov/food/enforcement.json?api_key=' + _config.fdaKey + '&limit=100&skip=100';
 
         _$httpBackend.expectGET(url).respond(500, null);
 
@@ -128,8 +128,8 @@ describe('fda Service', function () {
         _$httpBackend.flush();
 
 
-        expect(toastSpy.called).toBeTruthy();
-        _toastr.error.restore();
+        expect(analyticSpy.called).toBeTruthy();
+        //_toastr.error.restore();
 
 
     });

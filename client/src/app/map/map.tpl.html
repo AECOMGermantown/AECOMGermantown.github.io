@@ -2,8 +2,14 @@
     <div id="mapDiv">
         <div id="map"
              style="width:100%; height: 480px;">
-            <div map-legend="" map="mapCtrl.map"></div>
-            <div map-info="mapCtrl.mapInfo" map="mapCtrl.map" ></div>
+            <div data-ng-if="mapCtrl.map !== null">
+                <div map-legend="" map="mapCtrl.map"></div>
+            </div>
+            <div data-ng-if="mapCtrl.map !== null">
+                <div map-info="mapCtrl.mapInfo" map="mapCtrl.map" ></div>
+            </div>
+
+
         </div>
     </div>
 </div>
