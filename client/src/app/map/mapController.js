@@ -20,28 +20,36 @@ function mapController(L,config,utils,fdaService,statesRecallsService) {
 
         fdaService.getRecalls('food').then(function(resultRecalls){
 
-
-
             L.mapbox.accessToken = config.mbKey;
-            // Replace 'mapbox.streets' with your map id.
-            var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
-                maxZoom: 4,
-                dragging: false,
-                touchZoom: false,
-                scrollWheelZoom: false,
-                minZoom: 4
-            });
+
+            if (L.Browser.mobile || ($(window).width() < 700)) {
+
+                var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+                    dragging: 'false',
+                    maxZoom: 3,
+                    minZoom: 3
+                });
+                vm.map = L.map('map')
+                    .addLayer(mapboxTiles).setView([37.8, -96], 3);
+            } else {
+               
+                var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+                    dragging: 'false',
+                    maxZoom: 4,
+                    minZoom: 4
+                });
+                vm.map = L.map('map')
+                    .addLayer(mapboxTiles).setView([37.8, -96], 4);
+                             
+            }
+
             vm.mapInfo = statesRecallsService.getStateRecalls();
 
-            vm.map = L.map('map')
-                .addLayer(mapboxTiles).setView([37.8, -96], 4);
 
             geojson = L.geoJson(config.statesData, {
                 style: style,
                 onEachFeature: onEachFeature
             }).addTo(vm.map);
-
-
         });
 
 
@@ -65,13 +73,16 @@ function mapController(L,config,utils,fdaService,statesRecallsService) {
     function highlightFeature(e) {
         var layer = e.target;
 
-        layer.setStyle({
-            weight: 3,
-            color: '#86036D',
-            dashArray: '',
-            fillOpacity: 1,
-            fillColor: '#86036D'
-        });
+        if (($(window).width() > 700)) {
+            layer.setStyle({
+                weight: 3,
+                color: '#86036D',
+                dashArray: '',
+                fillOpacity: 1,
+                fillColor: '#86036D'
+            });
+        }
+
 
         if (!L.Browser.ie && !L.Browser.opera) {
             layer.bringToFront();
@@ -92,10 +103,11 @@ function mapController(L,config,utils,fdaService,statesRecallsService) {
     function onEachFeature(feature, layer) {
         layer.on({
             mouseover: highlightFeature,
-            mouseout: resetHighlight
-            // click: zoomToFeature
+            mouseout: resetHighlight,
+            focus: resetHighlight,
+            click: highlightFeature
         });
     }
 
-
 }
+
