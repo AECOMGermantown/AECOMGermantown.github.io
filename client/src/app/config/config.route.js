@@ -8,17 +8,16 @@ app.config(function($stateProvider, $urlRouterProvider){
     //Don't uncomment this line
    //$urlRouterProvider.otherwise("/map");
     $stateProvider
-       .state('home', {
+       /*.state('home', {
             url: "/home",
             templateUrl: "recalls/recalls.tpl.html",
             caption: "Recalls",
             navOrder:1
-        })
+        })*/
         .state('map', {
             url: "/map",
             templateUrl: "map/map.tpl.html",
-            caption: "Population Map",
+            caption: "Recalls Map",
             navOrder:1
         })
-
 });
