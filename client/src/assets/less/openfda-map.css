@@ -33,7 +33,7 @@
   display: none;
 }
 .leaflet-map-pane {
-  transform: translate3d(0px, 0px, 0px) !important;
+  /*transform: translate3d(0px, 0px, 0px) !important;*/
 }
 @media only screen and (max-width: 700px) {
   .leaflet-top.leaflet-right {
