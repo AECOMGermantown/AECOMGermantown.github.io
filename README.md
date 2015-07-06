@@ -21,6 +21,7 @@ Through an iterative process we identified the best fit open-source technology t
 •	Monitor.US for continuous application monitoring  
 •	Docker as the application container  
 •	Bower & NPM as the Web Package Manager
+• Google Analytics for user and site behavior 
 
 Sprint Lifecycle – 
 The 1-week sprint to build the prototype proceeded as follows:
