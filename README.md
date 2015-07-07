@@ -1,6 +1,7 @@
 GSA-Prototype - Link to publicly accessible prototype - http://52.11.38.94/
 
-Link to GitHub Repository -https://github.com/AECOMGermantown/AECOMGermantown.github.io
+Link to GitHub Repository (master branch release tag  v1.0)
+-https://github.com/AECOMGermantown/AECOMGermantown.github.io
 
 The AECOM Team used a combination of Agile Scrum and DevOps engineering techniques to facilitate a 1-week sprint to coordinate the openFDA prototype project. Major activities included initial project setup and elaboration of requirements, design, development, testing, user acceptance testing, and deployment of the prototype.
 
