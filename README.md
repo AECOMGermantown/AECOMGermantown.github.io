@@ -3,7 +3,7 @@ GSA-Prototype - Link to publicly accessible prototype - http://52.11.38.94/
 Link to GitHub Repository (master branch release tag  v1.0)
 -https://github.com/AECOMGermantown/AECOMGermantown.github.io
 
-The AECOM Team used a combination of Agile Scrum and DevOps engineering techniques to facilitate a 1-week sprint to coordinate the openFDA prototype project. Major activities included initial project setup and elaboration of requirements, design, development, testing, user acceptance testing, and deployment of the prototype.
+The URS Federal Services, Inc., an AECOM Company (AECOM) team used a combination of Agile Scrum and DevOps engineering techniques to facilitate a 1-week sprint to coordinate the openFDA prototype project. Major activities included initial project setup and elaboration of requirements, design, development, testing, user acceptance testing, and deployment of the prototype.
 
 We quickly assembled a Scrum team and had them work closely together (mostly collocated, but some distributed). The following team was created to support the prototype project, which incorporated many of the labor categories required under labor pool three (full stack):
 
@@ -41,5 +41,5 @@ Day 7: The team conducted a sprint review with the Product Owner for a final dem
 Result: 
 
 The end result of our openFDA prototype development effort was a sophisticated heat map design that used a broad base of open source tools, technologies, and API’s. Our Scrum team was able to combine a comprehensive tool set along with our Agile lightweight processes, to quickly collaborate and build working functionality that is readily available to benefit public users of FDA food recall information.
-Our ability to integrate and deploy an open-source tool set fully demonstrated our technical expertise around CI/CD, which will translate directly to any future projects supported under the 18F BPA.
+Our ability to integrate and deploy an open-source tool set fully demonstrated our technical expertise around CI/CD, which will translate directly to any future projects supported under the GSA ADS I BPA.
  
