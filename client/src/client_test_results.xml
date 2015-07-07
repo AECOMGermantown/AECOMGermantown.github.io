@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9.8 (Mac OS X)" package="unit" timestamp="2015-07-03T19:12:49" id="0" hostname="macbook8" tests="14" errors="0" failures="0" time="0.115">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34"/>
+    </properties>
+    <testcase name="should be registered" time="0.017" classname="unit PhantomJS 1.9.8 (Mac OS X).recall Model"/>
+    <testcase name="should create a recall" time="0.002" classname="unit PhantomJS 1.9.8 (Mac OS X).recall Model"/>
+    <testcase name="should be registered" time="0.02" classname="unit PhantomJS 1.9.8 (Mac OS X).fda Service"/>
+    <testcase name="should call getRecallInfo 50 times" time="0.017" classname="unit PhantomJS 1.9.8 (Mac OS X).fda Service"/>
+    <testcase name="should show toast if request fails" time="0.006" classname="unit PhantomJS 1.9.8 (Mac OS X).fda Service"/>
+    <testcase name="should populate recalls with 100 results" time="0.011" classname="unit PhantomJS 1.9.8 (Mac OS X).fda Service"/>
+    <testcase name="should create 100 recalls" time="0.015" classname="unit PhantomJS 1.9.8 (Mac OS X).fda Service"/>
+    <testcase name="should show toast if request for recall info fails" time="0.005" classname="unit PhantomJS 1.9.8 (Mac OS X).fda Service"/>
+    <testcase name="should be registered" time="0.002" classname="unit PhantomJS 1.9.8 (Mac OS X).utils Service"/>
+    <testcase name="should return url with proper substitution" time="0.001" classname="unit PhantomJS 1.9.8 (Mac OS X).utils Service"/>
+    <testcase name="should be defined" time="0.006" classname="unit PhantomJS 1.9.8 (Mac OS X).recalls Controller"/>
+    <testcase name="should call getRecalls in fdaService" time="0.005" classname="unit PhantomJS 1.9.8 (Mac OS X).recalls Controller"/>
+    <testcase name="should set recalls" time="0.004" classname="unit PhantomJS 1.9.8 (Mac OS X).recalls Controller"/>
+    <testcase name="should not set recalls" time="0.004" classname="unit PhantomJS 1.9.8 (Mac OS X).recalls Controller"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

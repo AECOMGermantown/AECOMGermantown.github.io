@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/app.template.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">app/app.template.js</span></h1>
+    <h2>
+        Statements: <span class="metric">72.22% <small>(13 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">50% <small>(3 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">72.22% <small>(13 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">app/</a> &#187; app.template.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(module) {
+try {
+  module = angular.module('template.app');
+} catch (e) {
+  module = angular.module('template.app', []);
+}
+module.run(['$templateCache', <span class="fstat-no" title="function not covered" >function($templateCache) {</span>
+<span class="cstat-no" title="statement not covered" >  $templateCache.put('header/header.tpl.html',</span>
+    '&lt;nav id="header-nav" class="navbar navbar-app navbar-absolute-top" role="navigation" ng-controller="headerController as headerCtrl"\n' +
+    '     role="navigation" &gt;\n' +
+    '    &lt;div id="topbar"&gt;&lt;/div&gt;\n' +
+    '    &lt;div class="container" &gt;\n' +
+    '        &lt;div id="navbar"&gt;\n' +
+    '            &lt;ul class="nav navbar-nav" ng-repeat="r in headerCtrl.routes"&gt;\n' +
+    '                &lt;li &gt;\n' +
+    '\n' +
+    '                    &lt;a ng-class="isNavbarActive(r.name)" ng-click="headerCtrl.routeChange(r.name)" class="links-14"&gt;{{r.caption}}&lt;/a&gt;\n' +
+    '                &lt;/li&gt;\n' +
+    '            &lt;/ul&gt;\n' +
+    '\n' +
+    '        &lt;/div&gt;\n' +
+    '    &lt;/div&gt;\n' +
+    '&lt;/nav&gt;\n' +
+    '');
+}]);
+})();
+&nbsp;
+(function(module) {
+try {
+  module = angular.module('template.app');
+} catch (e) {
+<span class="cstat-no" title="statement not covered" >  module = angular.module('template.app', []);</span>
+}
+module.run(['$templateCache', <span class="fstat-no" title="function not covered" >function($templateCache) {</span>
+<span class="cstat-no" title="statement not covered" >  $templateCache.put('map/map.tpl.html',</span>
+    '&lt;div ng-controller="mapController as mapCtrl"&gt;\n' +
+    '    &lt;div id="mapDiv"&gt;\n' +
+    '        &lt;div id="map"\n' +
+    '             style="width:100%; height: 480px;"&gt;\n' +
+    '            &lt;div map-legend="" map="mapCtrl.map"&gt;&lt;/div&gt;\n' +
+    '            &lt;div map-info="mapCtrl.mapInfo" map="mapCtrl.map" &gt;&lt;/div&gt;\n' +
+    '        &lt;/div&gt;\n' +
+    '    &lt;/div&gt;\n' +
+    '&lt;/div&gt;\n' +
+    '');
+}]);
+})();
+&nbsp;
+(function(module) {
+try {
+  module = angular.module('template.app');
+} catch (e) {
+<span class="cstat-no" title="statement not covered" >  module = angular.module('template.app', []);</span>
+}
+module.run(['$templateCache', <span class="fstat-no" title="function not covered" >function($templateCache) {</span>
+<span class="cstat-no" title="statement not covered" >  $templateCache.put('recalls/recalls.tpl.html',</span>
+    '&lt;div ng-controller="recallsController as recallsCtrl" &gt;\n' +
+    '\n' +
+    '    &lt;div class="input-group"&gt;\n' +
+    '        &lt;button type="button" data-ng-click="recallsCtrl.getRecalls(\'food\')" analytics-on="click"\n' +
+    '                analytics-event="GetFoodRecalls" analytics-category="ViewActions" analytics-label="Get Food Recalls"&gt;Get Food Recalls&lt;/button&gt;\n' +
+    '        &lt;button type="button" data-ng-click="recallsCtrl.getRecalls(\'drug\')" analytics-on="click"\n' +
+    '                analytics-event="GetDrugRecalls" analytics-category="ViewActions" analytics-label="Get Drug Recalls"&gt;Get Drug Recalls&lt;/button&gt;\n' +
+    '        &lt;button type="button" data-ng-click="recallsCtrl.getRecalls(\'device\')" analytics-on="click"\n' +
+    '                analytics-event="GetDeviceRecalls" analytics-category="ViewActions" analytics-label="Get Device Recalls"&gt;Get Device Recalls&lt;/button&gt;\n' +
+    '\n' +
+    '        &lt;div class="search-result" &gt;\n' +
+    '            &lt;ul ng-repeat="recall in recallsCtrl.recalls"&gt;\n' +
+    '                &lt;li&gt;{{recall.recall_number}}&lt;/li&gt;\n' +
+    '            &lt;/ul&gt;\n' +
+    '        &lt;/div&gt;\n' +
+    '    &lt;/div&gt;\n' +
+    '\n' +
+    '&lt;/div&gt;');
+}]);
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 23 2015 13:23:28 GMT-0400 (EDT)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
