@@ -41,5 +41,5 @@ Day 7: The team conducted a sprint review with the Product Owner for a final dem
 Result: 
 
 The end result of our openFDA prototype development effort was a sophisticated heat map design that used a broad base of open source tools, technologies, and API’s. Our Scrum team was able to combine a comprehensive tool set along with our Agile lightweight processes, to quickly collaborate and build working functionality that is readily available to benefit public users of FDA food recall information.
-Our ability to integrate and deploy an open-source tool set fully demonstrated our technical expertise around CI/CD, which will translate directly to any future projects supported under the GSA ADS I BPA in support of the 18F organization.
+Our ability to integrate and deploy an open-source tool set fully demonstrated our technical expertise around CI/CD, which will translate directly to any future projects supported under the GSA ADS I BPA in support of the 18F Organization.
  
