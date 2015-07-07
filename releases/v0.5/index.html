@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" ng-app="openfdaApp">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--
+    Apple-Specific Meta Tag Keys
+    https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html#//apple_ref/doc/uid/TP40008193-SW2
+    minimal-ui
+    -->
+    <!-- // Safari iOS apps only -->
+    <!-- Sets whether a web application runs in full-screen mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Sets the style of the status bar for a web application -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- // Chrome for Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!--[if lt IE 9]>
+    <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <title>Open FDA</title>
+    <base href="/">
+    <link rel="stylesheet" href="assets/css/openfda.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-64406206-1', 'auto');
+
+
+    </script>
+
+    <script src="app/app.vendor.js"></script>
+    <script src="app/app.template.js"></script>
+    <script src="app/app.openfda.js"></script>
+</head>
+<body>
+
+<div class="app">
+    <div ng-include="'header/header.tpl.html'"></div>
+    <div class="jumbotron jumbo-bg" style="padding-top: 60px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                    <div ng-include="'map/map.tpl.html'"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div ng-include="'body/body.tpl.html'"></div>
+
+    <div ng-include="'footer/footer.tpl.html'"></div>
+
+
+
+</div>
+
+
+</body>
+</html>
