@@ -26,11 +26,11 @@ coverage
 build
 bower_components
 
-app/*.template.js
-app/*.openfda.js
-assets/*openfda.css
-app/*.vendor.js
-assets/*.openfda.css
+src/app/*.template.js
+src/app/*.openfda.js
+src/assets/*openfda.css
+src/app/*.vendor.js
+src/assets/*.openfda.css
 *.diff
 client_test_results.xml
 e2e_test_report
