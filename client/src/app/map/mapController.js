@@ -2,9 +2,9 @@
 var mapMod = angular.module('mapModule');
 
 mapMod.controller('mapController', mapController);
-mapController.$inject = ['L','config','common.utils','common.fdaService','common.statesRecallsService'];
+mapController.$inject = ['L','$','config','common.utils','common.fdaService','common.statesRecallsService'];
 
-function mapController(L,config,utils,fdaService,statesRecallsService) {
+function mapController(L,$,config,utils,fdaService,statesRecallsService) {
 
     var vm = this;
 
@@ -20,11 +20,12 @@ function mapController(L,config,utils,fdaService,statesRecallsService) {
 
         fdaService.getRecalls('food').then(function(resultRecalls){
 
+            var mapboxTiles;
             L.mapbox.accessToken = config.mbKey;
 
             if (L.Browser.mobile || ($(window).width() < 700)) {
 
-                var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+                mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
                     dragging: 'false',
                     maxZoom: 3,
                     minZoom: 3
@@ -33,7 +34,7 @@ function mapController(L,config,utils,fdaService,statesRecallsService) {
                     .addLayer(mapboxTiles).setView([37.8, -96], 3);
             } else {
                
-                var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+                mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
                     dragging: 'false',
                     maxZoom: 4,
                     minZoom: 4
