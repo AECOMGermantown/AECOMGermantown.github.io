@@ -37,7 +37,7 @@ Day 5: We fully integrated the food recall information from the openFDA API data
 
 Day 6: Conducted usability tests with new site users on both laptop and mobile devices. Feedback was shared in the GitHub repo, which the Scrum team reviewed and incorporated minor changes into the initial design. We fully scripted out all our of unit tests to allow for complete code coverage and finalized all changes to the application. 
 
-Day 7: The team conducted a sprint review and Product Owner. Once acceptance was confirmed the team tagged the master branch in GitHub to timestamp and finalize all changes to the openFDA prototype. 
+Day 7: The team conducted a sprint review with the Product Owner for a final demostration of the prototype. Once acceptance was confirmed the team tagged the master branch in GitHub to timestamp and finalize all changes to the openFDA prototype. 
 
 Result: 
 The end result of our openFDA prototype development effort was a sophisticated heat map design that used a broad base of open source tools, technologies, and API’s. Our Scrum team was able to combine a comprehensive tool set along with our Agile lightweight processes, to quickly collaborate and build working functionality that is readily available to benefit public users of FDA food recall information.
