@@ -3,6 +3,8 @@ GSA-Prototype - Link to publicly accessible prototype - http://52.11.38.94/
 Link to GitHub Repository (master branch release tag  v1.0)
 -https://github.com/AECOMGermantown/AECOMGermantown.github.io
 
+Link to Docker Hub image - docker pull hbostic/aecomgermantown_openfda
+
 The URS Federal Services, Inc., an AECOM Company (AECOM) team used a combination of Agile Scrum and DevOps engineering techniques to facilitate a 1-week sprint to coordinate the openFDA prototype project. Major activities included initial project setup and elaboration of requirements, design, development, testing, user acceptance testing, and deployment of the prototype.
 
 We quickly assembled a Scrum team and had them work closely together (mostly collocated, but some distributed). The following team was created to support the prototype project, which incorporated many of the labor categories required under labor pool three (full stack):
@@ -20,7 +22,8 @@ Through an iterative process we identified the best fit open-source technology t
 • Github repository with a stream setup based on GitFlow 
 • Multiple Ubuntu web servers running Nginx on Amazon Web Services (AWS) 
 • OSSEC for application sercurity monitoring & Monitor.US for continuous application monitoring 
-• Docker as the application container • Bower & NPM as the Web Package Manager 
+• Docker as the application container (docker pull hbostic/aecomgermantown_openfda) 
+• Bower & NPM as the Web Package Manager 
 • Google Analytics for user and site behavior reports that were factored into overall usability improvements
 
 Sprint Lifecycle – The 1-week sprint to build the prototype proceeded as follows:
