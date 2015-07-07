@@ -6,20 +6,21 @@ The AECOM Team used a combination of Agile Scrum and DevOps engineering techniqu
 
 We quickly assembled a Scrum team and had them work closely together (mostly collocated, but some distributed). The following team was created to support the prototype project, which incorporated many of the labor categories required under labor pool three (full stack):
 
-Product Manager, Technical Architect, Back End Web Developer, Front End Web Developer, Front End Web Developer, Interaction Designer, DevOps Engineer
+Product Manager, Technical Architect, Back End Web Developer, (2) Front End Web Developer, Interaction Designer, DevOps Engineer
 
 Through an iterative process we identified the best fit open-source technology tool chain to support development, with a heavy focus on automation and continuous integration. The following tool chain was set up for the prototype project: 
 
 • WebStorm IDE for JavaScript, CSS & HTML for prototype development 
 • Leaflet/Mapbox as an open source mapping API that was the bases for the heat map implementation 
 • Angular JS for application framework 
-• SASS as the CSS precompiler 
-• Angular UI router, angular-toastr, angular-bootstrap, and lodash for web development libraries 
+• LESS as the CSS precompiler 
+• Angular-toastr, angular-bootstrap, and lodash for web development libraries 
 • Jenkins for continuous integration 
-• Gulp for compilation and builds • Karma, Jasmine, Sinon, and Protractor as a suite of automated unit testing for JavaScript and Angular 
+• Gulp for compilation and builds 
+• Karma, Jasmine, Sinon, and Protractor as a suite of automated unit testing for JavaScript and Angular 
 • Github repository with a stream setup based on GitFlow 
 • Multiple Ubuntu web servers running Nginx on Amazon Web Services (AWS) 
-• OSSEC for application sercurity monitoring Monitor.US for continuous application monitoring
+• OSSEC for application sercurity monitoring & Monitor.US for continuous application monitoring
 • Docker as the application container
 • Bower & NPM as the Web Package Manager 
 • Google Analytics for user and site behavior reports that were factored into overall usability improvements
@@ -41,4 +42,5 @@ Day 7: The team conducted a sprint review with the Product Owner for a final dem
 
 Result: 
 The end result of our openFDA prototype development effort was a sophisticated heat map design that used a broad base of open source tools, technologies, and API’s. Our Scrum team was able to combine a comprehensive tool set along with our Agile lightweight processes, to quickly collaborate and build working functionality that is readily available to benefit public users of FDA food recall information.
+
 Our ability to integrate and deploy an open-source tool set fully demonstrated our technical expertise around CI/CD, which will translate directly to any future projects supported under the 18F BPA.
