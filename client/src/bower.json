@@ -1,0 +1,37 @@
+{
+  "name": "openfda",
+  "version": "0.1.0",
+  "homepage": "http://changeme",
+  "authors": [
+    "Alex Bostic <alex.bostic@aecom.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.1",
+    "angular-mocks": "~1.4.1",
+    "angular-animate": "~1.4.1",
+    "angular-aria": "~1.4.1",
+    "bootstrap": "~3.3.4",
+    "angular-bootstrap": "~0.12.1",
+    "angular-typeahead": "~0.2.2",
+    "angular-sanitize": "~1.4.1",
+    "lodash": "~3.9.3",
+    "angular-toastr": "~1.4.1",
+    "angular-ui-router": "~0.2.15",
+    "leaflet": "~0.7.3",
+    "mapbox.js": "~2.2.0",
+    "angulartics": "~0.18.0"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "1.4.1"
+  }
+}

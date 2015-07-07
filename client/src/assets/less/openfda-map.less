@@ -1,0 +1,57 @@
+
+.info {
+  padding: 15px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  border: 1px #28c1eb solid;
+  /*@media only screen and (max-width : 700px) {display:none;}*/
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+.legend {
+  background: white;
+  background: rgba(255,255,255,0.8);
+  text-align: left;
+  line-height: 18px;
+  color: #555;
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+#map {
+  height:480px;
+}
+
+.leaflet-tile-pane, .leaflet-control-zoom, .leaflet-control-attribution {
+  display:none;
+}
+.leaflet-map-pane {
+  /*transform: translate3d(0px, 0px, 0px) !important;*/
+}
+
+
+@media only screen and (max-width : 700px) {
+  .leaflet-top.leaflet-right {
+    top:auto;
+    right:auto;
+    left: 0;
+    bottom: 0;
+  }
+  #map {
+    height:300px;
+  }
+
+  .info {
+    padding: 5px;
+  }
+}

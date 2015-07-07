@@ -1,0 +1,18 @@
+<div ng-controller="recallsController as recallsCtrl" >
+
+    <div class="input-group">
+        <button type="button" data-ng-click="recallsCtrl.getRecalls('food')" analytics-on="click"
+                analytics-event="GetFoodRecalls" analytics-category="ViewActions" analytics-label="Get Food Recalls">Get Food Recalls</button>
+        <button type="button" data-ng-click="recallsCtrl.getRecalls('drug')" analytics-on="click"
+                analytics-event="GetDrugRecalls" analytics-category="ViewActions" analytics-label="Get Drug Recalls">Get Drug Recalls</button>
+        <button type="button" data-ng-click="recallsCtrl.getRecalls('device')" analytics-on="click"
+                analytics-event="GetDeviceRecalls" analytics-category="ViewActions" analytics-label="Get Device Recalls">Get Device Recalls</button>
+
+        <div class="search-result" >
+            <ul ng-repeat="recall in recallsCtrl.recalls">
+                <li>{{recall.recall_number}}</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
